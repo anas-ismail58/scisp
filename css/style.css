@@ -21,7 +21,7 @@
   --text-white: #ffffff;
   --text-default: #161616;
 
-  --color-neutral-200: #e5e7eb;
+  --color-neutral-200: #E5E7EB;
   --border-neutral-primary: #d2d6db;
 
   --white-op-40: rgba(255, 255, 255, 0.4);
@@ -967,7 +967,7 @@ body {
   font-family: "IBMPlexSansArabic";
   touch-action: pan-y;
   text-align: start;
-  background-color: #f9fafb;
+  background-color: #F9FAFB;
 }
 
 body.no-scroll {
@@ -1557,8 +1557,25 @@ a.mega-menu-card:hover h3 {
   width: 100%;
   text-align: center;
 }
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin:0;
+}
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet {
+    width:16px;
+    height:16px;
+    margin:0;
+    background:var(--color-neutral-200);
+}
+.swiper-pagination {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin: 12px;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet  {
   background: var(--colors-brand-700);
 }
 
@@ -1963,7 +1980,7 @@ div#feedback-no-form-rating,
 }
 
 .btn.btn-close:hover {
-  background: #e5e7eb;
+  background: var(--color-neutral-200);
 }
 
 .rating-section_content_description p {
