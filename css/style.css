@@ -1062,6 +1062,9 @@ body.no-scroll {
   transition: all .5s ease-in-out;
 }
 
+.scisp-nav .main-header .container  {
+  transition: all .5s ease-in-out;
+}
 .scisp-nav.scrolled .main-header .container {
   padding: 0;
   top: 0;
@@ -1544,38 +1547,41 @@ a.mega-menu-card:hover h3 {
   padding: 12px;
 }
 
-.spcisp-role-slider {
-  padding-bottom: 40px;
-  /* Adds space for the pagination */
-  position: relative;
-}
-
-.spcisp-role-slider .swiper-pagination {
+.spcisp-role-slider .swiper-pagination,
+.spcisp-news-slider .swiper-pagination {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  text-align: center;
+  top: auto;
 }
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+
+.spcisp-role-slider .swiper-wrapper,
+.spcisp-news-slider .swiper-wrapper{
+  padding-bottom: 60px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin:0;
+  margin: 0;
 }
 
 .swiper-pagination-bullet {
-    width:16px;
-    height:16px;
-    margin:0;
-    background:var(--color-neutral-200);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  /* background:var(--color-neutral-200); */
 }
+
 .swiper-pagination {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px;
 }
-.swiper-pagination-bullet-active.swiper-pagination-bullet  {
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet {
   background: var(--colors-brand-700);
 }
 
@@ -1589,22 +1595,15 @@ a.mega-menu-card:hover h3 {
   width: 608px;
   height: 360px;
 }
-.news-card-date{
-font-size: 14px;
-line-height: 20px;
-}
-.spcisp-news-slider {
-  padding-bottom: 40px;
-  /* Adds space for the pagination */
-  position: relative;
+
+.news-card-date {
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.spcisp-news-slider .swiper-pagination {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
+.spcisp-news-slider {
+  /* Adds space for the pagination */
+  position: relative;
 }
 
 /*  Footer  */
