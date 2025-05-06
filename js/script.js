@@ -138,24 +138,27 @@ var swiper = new Swiper(".spcisp-role-slider", {
     loop: true,
     spaceBetween: 10,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     breakpoints: {
-      576: {
-        slidesPerView: 1.6,
-        spaceBetween: 24,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 24,
-      },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 24,
-      },
+        576: {
+            slidesPerView: 1.6,
+            spaceBetween: 24,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 24,
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+        },
     },
-  });
+});
 
-  console.log('main defult');
-  
+console.log('branch21');
+
+console.log('branch name : sayed')
+
+console.log('branch name : sayed')
