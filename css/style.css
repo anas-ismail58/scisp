@@ -1031,6 +1031,9 @@ body.no-scroll {
   transition: all .8s ease-in-out;
 }
 
+.scisp-nav .main-header .container  {
+  transition: all .5s ease-in-out;
+}
 .scisp-nav.scrolled .main-header .container {
   top: 0;
   transition: all .8s ease-in-out;
@@ -1530,9 +1533,15 @@ a.mega-menu-card:hover h3 {
   width: 100%;
   top: auto;
 }
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+
+.spcisp-role-slider .swiper-wrapper,
+.spcisp-news-slider .swiper-wrapper{
+  padding-bottom: 60px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    margin:0;
+  margin: 0;
 }
 
 <<<<<<< HEAD
@@ -1567,20 +1576,26 @@ a.mega-menu-card:hover h3 {
 .swiper-pagination-bullet-active.swiper-pagination-bullet {
 =======
 .swiper-pagination-bullet {
-    width:16px;
-    height:16px;
-    margin:0;
-    background:var(--color-neutral-200);
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  /* background:var(--color-neutral-200); */
 }
+
 .swiper-pagination {
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px;
 }
+<<<<<<< HEAD
 .swiper-pagination-bullet-active.swiper-pagination-bullet  {
 >>>>>>> 71e44db (accept merge)
+=======
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet {
+>>>>>>> 7b09b58 (accept merge)
   background: var(--colors-brand-700);
 }
 
@@ -1598,6 +1613,7 @@ a.mega-menu-card:hover h3 {
 .news-card-date {
   font-size: 14px;
   line-height: 20px;
+<<<<<<< HEAD
 }
 
 .spcisp-news-slider {
@@ -1608,6 +1624,13 @@ a.mega-menu-card:hover h3 {
 /* twitter */
 .twitter-tweet-wrapper {
   width: 100%;
+=======
+}
+
+.spcisp-news-slider {
+  /* Adds space for the pagination */
+  position: relative;
+>>>>>>> 7b09b58 (accept merge)
 }
 
 /* Make embedded tweets responsive */
