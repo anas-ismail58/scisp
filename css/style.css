@@ -1530,7 +1530,12 @@ a.mega-menu-card:hover h3 {
   width: 100%;
   top: auto;
 }
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin:0;
+}
 
+<<<<<<< HEAD
 .spcisp-role-slider .swiper-wrapper,
 .spcisp-news-slider .swiper-wrapper {
   padding-bottom: 60px;
@@ -1560,6 +1565,22 @@ a.mega-menu-card:hover h3 {
 }
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet {
+=======
+.swiper-pagination-bullet {
+    width:16px;
+    height:16px;
+    margin:0;
+    background:var(--color-neutral-200);
+}
+.swiper-pagination {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin: 12px;
+}
+.swiper-pagination-bullet-active.swiper-pagination-bullet  {
+>>>>>>> 71e44db (accept merge)
   background: var(--colors-brand-700);
 }
 
