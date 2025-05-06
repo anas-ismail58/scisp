@@ -157,4 +157,9 @@ var swiper = new Swiper(".spcisp-role-slider", {
     },
   });
 
+<<<<<<<< HEAD:SCISP/js/script.js
+  console.log('main defult');
+  
+========
   console.log('branch21')
+>>>>>>>> branch1:js/script.js
