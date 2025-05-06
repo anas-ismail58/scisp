@@ -1626,6 +1626,12 @@ a.mega-menu-card:hover h3 {
 }
 
 .spcisp-role-slider .swiper-wrapper,
+.spcisp-news-slider .swiper-wrapper{
+  padding-bottom: 60px;
+  top: auto;
+}
+
+.spcisp-role-slider .swiper-wrapper,
 .spcisp-news-slider .swiper-wrapper {
   padding-bottom: 60px;
 }
@@ -1649,6 +1655,12 @@ a.mega-menu-card:hover h3 {
 }
 
 .swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  /* background:var(--color-neutral-200); */
+}
+
   width: 16px;
   height: 16px;
   margin: 0;
