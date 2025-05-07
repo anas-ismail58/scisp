@@ -1054,6 +1054,7 @@ body.no-scroll {
     padding: 0 24px;
     max-width: 100%;
   }
+
   .scisp-navbar__wapper {
     max-width: calc(100% - 48px);
   }
@@ -1066,6 +1067,7 @@ body.no-scroll {
   .container-navbar {
     padding: 0 16px;
   }
+
   .scisp-navbar__wapper {
     max-width: calc(100% - 32px);
   }
@@ -1740,6 +1742,7 @@ a.mega-menu-card:hover h3 {
   max-width: 100% !important;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .tweet-wrapper {
   max-width: 100%;
   width: 100%;
@@ -1748,6 +1751,19 @@ a.mega-menu-card:hover h3 {
 =======
 
 >>>>>>> ce4297a (commit)
+=======
+.custom-tweet {
+  border-radius: 8px;
+  outline: 2px solid #1da1f2;
+  transition: transform 0.3s ease;
+}
+.custom-tweet body {
+  background-color: #067647;
+}
+.custom-tweet:hover {
+  transform: scale(1.01);
+}
+>>>>>>> 6e9b85a (faded for hero section)
 
 
 /*  Footer  */
