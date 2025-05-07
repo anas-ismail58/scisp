@@ -1606,6 +1606,19 @@ a.mega-menu-card:hover h3 {
   position: relative;
 }
 
+/* twitter */
+.twitter-tweet-wrapper {
+  width: 100%;
+}
+
+/* Make embedded tweets responsive */
+.twitter-tweet {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+
+
 /*  Footer  */
 footer.scisp-footer {
   padding: 40px 0 24px 0;
