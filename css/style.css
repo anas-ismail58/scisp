@@ -1609,7 +1609,7 @@ a.mega-menu-card:hover h3 {
 }
 
 .spcisp-role-slider .swiper-wrapper,
-.spcisp-news-slider .swiper-wrapper{
+.spcisp-news-slider .swiper-wrapper {
   padding-bottom: 60px;
   top: auto;
 }
@@ -1628,7 +1628,8 @@ a.mega-menu-card:hover h3 {
   width: 16px;
   height: 16px;
   margin: 0;
-  /* background:var(--color-neutral-200); */
+  background: var(--color-neutral-200);
+  opacity: 1;
 }
 
   width: 16px;
