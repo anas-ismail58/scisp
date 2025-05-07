@@ -1,4 +1,14 @@
 (function () {
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".scisp-nav");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+
+
     // Run when DOM is ready
     document.addEventListener("DOMContentLoaded", initNavbar);
 
@@ -174,19 +184,19 @@
         },
         breakpoints: {
             0: {
-                slidesPerView: 1,
+                slidesPerView: 1.2,
                 spaceBetween: 24,
             },
             576: {
-                slidesPerView: 1,
+                slidesPerView: 1.6,
                 spaceBetween: 24,
             },
             768: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 24,
             },
             992: {
-                slidesPerView: 1,
+                slidesPerView: 3,
                 spaceBetween: 24,
             },
         },
