@@ -1632,13 +1632,6 @@ a.mega-menu-card:hover h3 {
   opacity: 1;
 }
 
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  background: var(--color-neutral-200);
-  opacity: 1;
-}
-
 .swiper-pagination {
   display: flex;
   align-items: center;
