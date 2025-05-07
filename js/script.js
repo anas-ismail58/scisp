@@ -1,4 +1,14 @@
 (function () {
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".scisp-nav");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+
+
     // Run when DOM is ready
     document.addEventListener("DOMContentLoaded", initNavbar);
 
@@ -131,34 +141,32 @@
             draggable: true,
         },
     });
+    const roleSwiper = new Swiper(".spcisp-role-slider", {
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: 24,
+            },
+            576: {
+                slidesPerView: 1.6,
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+        },
+    });
 })();
 // role swiper
-var swiper = new Swiper(".spcisp-role-slider", {
-    slidesPerView: 1,
-    loop: true,
-    spaceBetween: 10,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 1.6,
-            spaceBetween: 24,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 24,
-        },
-        992: {
-            slidesPerView: 3,
-            spaceBetween: 24,
-        },
-    },
-});
-
-console.log('branch21');
-
-console.log('branch name : sayed')
-
-console.log('branch name : sayed')
