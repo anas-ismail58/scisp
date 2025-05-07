@@ -990,16 +990,7 @@ body.no-scroll {
 }
 
 /* Main container centered with max-width of 1440px */
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 48cc15c (navbar container and all container for design)
-.container,
-.container-navbar {
-=======
-
->>>>>>> a10c69c (test)
 .container,
 .container-navbar {
   width: 100%;
@@ -1014,96 +1005,9 @@ body.no-scroll {
 
 .scisp-navbar__wapper {
   margin: 0 auto;
-<<<<<<< HEAD
 }
 
 
-=======
-}
-
-
-<<<<<<< HEAD
-  .container,
-  .container-navbar {
-    padding: 0 80px;
-    max-width: 100%;
-  }
-
-  .scisp-nav.scrolled .scisp-navbar .container {
-    padding: 0 80px;
-  }
-}
-
-@media (min-width: 1440px) {
-
-  .container,
-  .container-navbar {
-    padding: 0 80px;
-    max-width: 1440px;
-  }
-
-  .scisp-navbar__wapper {
-    max-width: calc(1440px - 160px);
-  }
-
-  .scisp-nav.scrolled .scisp-navbar .container {
-    padding: 0 80px;
-  }
-}
-
-/* Tablets (e.g. 1024px and below) */
-@media (max-width: 1024px) {
-
-  .container,
-  .container-navbar {
-    padding: 0 24px;
-    max-width: 100%;
-  }
-
-  .scisp-navbar__wapper {
-    max-width: calc(100% - 48px);
-  }
-}
-
-/* Mobile devices (e.g. 768px and below) */
-@media (max-width: 768px) {
-
-  .container,
-  .container-navbar {
-    padding: 0 16px;
-  }
-
-  .scisp-navbar__wapper {
-    max-width: calc(100% - 32px);
-  }
-
-  .scisp-nav.scrolled .scisp-navbar .container {
-    padding: 0 16px;
-  }
-
-  .scisp-nav .main-header .container,
-  .scisp-nav.scrolled .main-header .container {
-    padding: 0;
-
-  }
-
-  .scisp-nav .scisp-navbar.rounded-8 {
-    border-radius: 0;
-    padding: 0 16px;
-  }
-
-  .scisp-nav,
-  .scisp-nav.scrolled {
-    top: 0 !important;
-  }
-
-  .scisp-topnav.mb-24 {
-    margin-bottom: 0;
-  }
-}
->>>>>>> 48cc15c (navbar container and all container for design)
-=======
->>>>>>> 61dc25f (news padding card)
 
 /* Header  */
 .scisp-nav {
@@ -1121,13 +1025,6 @@ body.no-scroll {
 
 .scisp-nav {
   transition: all .8s ease-in-out;
-<<<<<<< HEAD
-}
-
-.scisp-nav .main-header .container {
-  transition: all .8s ease-in-out;
-=======
->>>>>>> 48cc15c (navbar container and all container for design)
 }
 
 .scisp-nav .main-header .container {
@@ -1640,23 +1537,6 @@ a.mega-menu-card:hover h3 {
   top: auto;
 }
 
-.spcisp-role-slider .swiper-wrapper,
-.spcisp-news-slider .swiper-wrapper {
-  padding-bottom: 60px;
-}
-
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0;
-}
-
-<<<<<<< HEAD
-.spcisp-role-slider .swiper-wrapper,
-.spcisp-news-slider .swiper-wrapper {
-  padding-bottom: 60px;
-  top: auto;
-}
-
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -1680,29 +1560,6 @@ a.mega-menu-card:hover h3 {
 }
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet {
-=======
-.swiper-pagination-bullet {
-  width: 16px;
-  height: 16px;
-  margin: 0;
-  background: var(--color-neutral-200);
-  opacity: 1;
-}
-
-.swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 12px;
-}
-<<<<<<< HEAD
-.swiper-pagination-bullet-active.swiper-pagination-bullet  {
->>>>>>> 71e44db (accept merge)
-=======
-
-.swiper-pagination-bullet-active.swiper-pagination-bullet {
->>>>>>> 7b09b58 (accept merge)
   background: var(--colors-brand-700);
 }
 
@@ -1720,7 +1577,6 @@ a.mega-menu-card:hover h3 {
 .news-card-date {
   font-size: 14px;
   line-height: 20px;
-<<<<<<< HEAD
 }
 
 .spcisp-news-slider {
@@ -1731,16 +1587,6 @@ a.mega-menu-card:hover h3 {
 /* twitter */
 .twitter-tweet-wrapper {
   width: 100%;
-<<<<<<< HEAD
-=======
-}
-
-.spcisp-news-slider {
-  /* Adds space for the pagination */
-  position: relative;
->>>>>>> 7b09b58 (accept merge)
-=======
->>>>>>> ce4297a (commit)
 }
 
 /* Make embedded tweets responsive */
@@ -1748,33 +1594,12 @@ a.mega-menu-card:hover h3 {
   width: 100% !important;
   max-width: 100% !important;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .tweet-wrapper {
   max-width: 100%;
   width: 100%;
 }
-<<<<<<< HEAD
 /* test */
-=======
 
->>>>>>> ce4297a (commit)
-=======
-.custom-tweet {
-  border-radius: 8px;
-  outline: 2px solid #1da1f2;
-  transition: transform 0.3s ease;
-}
-.custom-tweet body {
-  background-color: #067647;
-}
-.custom-tweet:hover {
-  transform: scale(1.01);
-}
->>>>>>> 6e9b85a (faded for hero section)
-
-=======
->>>>>>> f9033c5 (row change)
 
 /*  Footer  */
 footer.scisp-footer {
