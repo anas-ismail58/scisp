@@ -990,7 +990,10 @@ body.no-scroll {
 }
 
 /* Main container centered with max-width of 1440px */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 48cc15c (navbar container and all container for design)
 .container,
 .container-navbar {
   width: 100%;
@@ -1005,9 +1008,93 @@ body.no-scroll {
 
 .scisp-navbar__wapper {
   margin: 0 auto;
+<<<<<<< HEAD
 }
 
 
+=======
+}
+
+/* Medium screens (e.g. 1440px and below) */
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+  .container,
+  .container-navbar {
+    padding: 0 80px;
+    max-width: 100%;
+  }
+
+  .scisp-nav.scrolled .scisp-navbar .container {
+    padding: 0 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .container,
+  .container-navbar {
+    padding: 0 80px;
+    max-width: 1440px;
+  }
+
+  .scisp-navbar__wapper {
+    max-width: calc(1440px - 160px);
+  }
+
+  .scisp-nav.scrolled .scisp-navbar .container {
+    padding: 0 80px;
+  }
+}
+
+/* Tablets (e.g. 1024px and below) */
+@media (max-width: 1024px) {
+
+  .container,
+  .container-navbar {
+    padding: 0 24px;
+    max-width: 100%;
+  }
+  .scisp-navbar__wapper {
+    max-width: calc(100% - 48px);
+  }
+}
+
+/* Mobile devices (e.g. 768px and below) */
+@media (max-width: 768px) {
+
+  .container,
+  .container-navbar {
+    padding: 0 16px;
+  }
+  .scisp-navbar__wapper {
+    max-width: calc(100% - 32px);
+  }
+
+  .scisp-nav.scrolled .scisp-navbar .container {
+    padding: 0 16px;
+  }
+
+  .scisp-nav .main-header .container,
+  .scisp-nav.scrolled .main-header .container {
+    padding: 0;
+
+  }
+
+  .scisp-nav .scisp-navbar.rounded-8 {
+    border-radius: 0;
+    padding: 0 16px;
+  }
+
+  .scisp-nav,
+  .scisp-nav.scrolled {
+    top: 0 !important;
+  }
+
+  .scisp-topnav.mb-24 {
+    margin-bottom: 0;
+  }
+}
+>>>>>>> 48cc15c (navbar container and all container for design)
 
 /* Header  */
 .scisp-nav {
@@ -1025,15 +1112,19 @@ body.no-scroll {
 
 .scisp-nav {
   transition: all .8s ease-in-out;
+<<<<<<< HEAD
+}
+
+.scisp-nav .main-header .container {
+  transition: all .8s ease-in-out;
+=======
+>>>>>>> 48cc15c (navbar container and all container for design)
 }
 
 .scisp-nav .main-header .container {
   transition: all .8s ease-in-out;
 }
 
-.scisp-nav .main-header .container  {
-  transition: all .5s ease-in-out;
-}
 .scisp-nav.scrolled .main-header .container {
   top: 0;
   transition: all .8s ease-in-out;
@@ -1535,7 +1626,7 @@ a.mega-menu-card:hover h3 {
 }
 
 .spcisp-role-slider .swiper-wrapper,
-.spcisp-news-slider .swiper-wrapper{
+.spcisp-news-slider .swiper-wrapper {
   padding-bottom: 60px;
 }
 
@@ -1579,7 +1670,8 @@ a.mega-menu-card:hover h3 {
   width: 16px;
   height: 16px;
   margin: 0;
-  /* background:var(--color-neutral-200); */
+  background: var(--color-neutral-200);
+  opacity: 1;
 }
 
 .swiper-pagination {
