@@ -1021,9 +1021,8 @@ body.no-scroll {
 =======
 }
 
-/* Medium screens (e.g. 1440px and below) */
-@media (min-width: 1024px) and (max-width: 1440px) {
 
+<<<<<<< HEAD
   .container,
   .container-navbar {
     padding: 0 80px;
@@ -1103,6 +1102,8 @@ body.no-scroll {
   }
 }
 >>>>>>> 48cc15c (navbar container and all container for design)
+=======
+>>>>>>> 61dc25f (news padding card)
 
 /* Header  */
 .scisp-nav {
