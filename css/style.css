@@ -991,11 +991,15 @@ body.no-scroll {
 
 /* Main container centered with max-width of 1440px */
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 48cc15c (navbar container and all container for design)
 .container,
 .container-navbar {
+=======
+
+>>>>>>> a10c69c (test)
 .container,
 .container-navbar {
   width: 100%;
