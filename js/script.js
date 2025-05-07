@@ -168,5 +168,33 @@
             },
         },
     });
+
+// news swiper
+const newsSwiper = new Swiper(".spcisp-news-slider", {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
+        576: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
+        992: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
+    },
+});
 })();
-// role swiper

@@ -803,7 +803,7 @@
 
 /* Text Colors */
 .text-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .text-primary-400 {
@@ -1022,18 +1022,21 @@ body.no-scroll {
   .container {
     padding: 0 16px;
   }
+
   .scisp-nav .main-header .container,
   .scisp-nav.scrolled .main-header .container {
     padding: 0;
-    
+
   }
+
   .scisp-nav .scisp-navbar.rounded-8 {
     border-radius: 0;
     padding: 0 16px;
   }
+
   .scisp-nav,
   .scisp-nav.scrolled {
-    top: 0!important;
+    top: 0 !important;
   }
 
   .scisp-topnav.mb-24 {
@@ -1557,6 +1560,34 @@ a.mega-menu-card:hover h3 {
 
 .swiper-pagination-bullet-active {
   background: var(--colors-brand-700);
+}
+
+
+/* news */
+.news-card {
+  border: 1px solid var(--border-neutral-primary)
+}
+
+.news-card-image img {
+  width: 608px;
+  height: 360px;
+}
+.news-card-date{
+font-size: 14px;
+line-height: 20px;
+}
+.spcisp-news-slider {
+  padding-bottom: 40px;
+  /* Adds space for the pagination */
+  position: relative;
+}
+
+.spcisp-news-slider .swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 /*  Footer  */
