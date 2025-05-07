@@ -1,4 +1,14 @@
 (function () {
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector(".scisp-nav");
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+
+
     // Run when DOM is ready
     document.addEventListener("DOMContentLoaded", initNavbar);
 
@@ -121,7 +131,7 @@
     }
     const swiper = new Swiper(".hero-swiper", {
         slidesPerView: 1,
-        spaceBetween: 10,
+        spaceBetween: 0,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -131,30 +141,60 @@
             draggable: true,
         },
     });
-})();
-// role swiper
-var swiper = new Swiper(".spcisp-role-slider", {
+    const roleSwiper = new Swiper(".spcisp-role-slider", {
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: 24,
+            },
+            576: {
+                slidesPerView: 1.6,
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+        },
+    });
+
+// news swiper
+const newsSwiper = new Swiper(".spcisp-news-slider", {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 10,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     breakpoints: {
-      576: {
-        slidesPerView: 1.6,
-        spaceBetween: 24,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 24,
-      },
-      992: {
-        slidesPerView: 3,
-        spaceBetween: 24,
-      },
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
+        576: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
+        768: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
+        992: {
+            slidesPerView: 1,
+            spaceBetween: 24,
+        },
     },
-  });
-
-  console.log('branch1')
+});
+})();
