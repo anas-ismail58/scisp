@@ -129,16 +129,20 @@
             );
         }
     }
-    const swiper = new Swiper(".hero-swiper", {
+    const heroSwiper = new Swiper(".hero-swiper", {
         slidesPerView: 1,
         spaceBetween: 0,
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true,
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
         scrollbar: {
             el: ".swiper-scrollbar",
-            draggable: true,
+            draggable: false,
         },
     });
     const roleSwiper = new Swiper(".spcisp-role-slider", {
@@ -169,32 +173,72 @@
         },
     });
 
-// news swiper
-const newsSwiper = new Swiper(".spcisp-news-slider", {
-    slidesPerView: 1,
-    loop: true,
-    spaceBetween: 10,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 24,
+    // news swiper
+    const newsSwiper = new Swiper(".spcisp-news-slider", {
+        slidesPerView: 1,
+        loop: true,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
         },
-        576: {
-            slidesPerView: 1,
-            spaceBetween: 24,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            576: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            992: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
         },
-        768: {
-            slidesPerView: 1,
-            spaceBetween: 24,
-        },
-        992: {
-            slidesPerView: 1,
-            spaceBetween: 24,
-        },
-    },
-});
+    });
+    // Wait for the tweet to be rendered (iframe added by widgets.js)
+    const observer = new MutationObserver(() => {
+        const tweetIframe = document.querySelector('.twitter-tweet iframe');
+
+        if (tweetIframe) {
+            // Add custom class to the iframe for styling
+            //tweetIframe.classList.add('custom-tweet');
+            try {
+                const iframeDoc = tweetIframe.contentWindow.document;
+                const targetDiv = iframeDoc.getElementById('#app'); // or any selector
+
+                if (targetDiv) {
+                    targetDiv.classList.add('my-class');
+                    console.log(targetDiv);
+                    console.log('Class added!');
+                } else {
+                    console.warn('Target div not found inside iframe');
+                }
+            } catch (err) {
+                console.error('Error accessing iframe content:', err);
+            }
+            // Add a class to <body> so you can style globally if needed
+            // document.body.classList.add('tweet-loaded');
+
+            console.log('Tweet rendered and styled.');
+
+            // Stop observing once the tweet is found
+            observer.disconnect();
+
+
+        }
+    });
+
+    // Start observing the body for changes (new elements)
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+    });
+
+
 })();
