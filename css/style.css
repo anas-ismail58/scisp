@@ -1624,6 +1624,7 @@ a.mega-menu-card:hover h3 {
 /* twitter */
 .twitter-tweet-wrapper {
   width: 100%;
+<<<<<<< HEAD
 =======
 }
 
@@ -1631,6 +1632,8 @@ a.mega-menu-card:hover h3 {
   /* Adds space for the pagination */
   position: relative;
 >>>>>>> 7b09b58 (accept merge)
+=======
+>>>>>>> ce4297a (commit)
 }
 
 /* Make embedded tweets responsive */
@@ -1638,11 +1641,15 @@ a.mega-menu-card:hover h3 {
   width: 100% !important;
   max-width: 100% !important;
 }
+<<<<<<< HEAD
 .tweet-wrapper {
   max-width: 100%;
   width: 100%;
 }
 /* test */
+=======
+
+>>>>>>> ce4297a (commit)
 
 
 /*  Footer  */
