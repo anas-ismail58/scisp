@@ -1675,7 +1675,11 @@ a.mega-menu-card:hover h3 {
   width: 100% !important;
   max-width: 100% !important;
 }
-
+.tweet-wrapper {
+  max-width: 100%;
+  width: 100%;
+}
+/* test */
 
 
 /*  Footer  */
