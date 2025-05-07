@@ -996,6 +996,8 @@ body.no-scroll {
 >>>>>>> 48cc15c (navbar container and all container for design)
 .container,
 .container-navbar {
+.container,
+.container-navbar {
   width: 100%;
   max-width: 1440px;
   /* Hard upper limit */
