@@ -132,6 +132,14 @@
     transition: transform 0.3s ease-in-out;
 }
 
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target="#megaSearch"] {
+    padding: 24px 16px 24px 16px;
+}
+
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target="#megaSearch"]:after {
+    display: none;
+}
+
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active::after {
     transform: rotate(180deg);
     transition: transform 0.3s ease-in-out;
