@@ -119,6 +119,24 @@
     pointer-events: none;
 }
 
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target] {
+    padding: 24px 32px 24px 16px;
+    position: relative;
+}
+
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target]:after {
+    position: absolute;
+    content: "\e91f";
+    font-family: "SCISP";
+    right: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active::after {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
 .btn-primary:hover {
     background-color: #166a45 !important;
     border-color: #166a45 !important;
