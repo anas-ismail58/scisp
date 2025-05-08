@@ -1053,6 +1053,7 @@ body.no-scroll {
 
 .scisp-nav.scrolled .scisp-navbar.rounded-8 {
   border-radius: 0;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
 }
 
 .main-header__icons {
@@ -1315,19 +1316,21 @@ a.mega-menu-card:hover h3 {
 @media screen and (max-width: 1199.98px) {
   .navbar-expand-xl .navbar-nav .nav-link {
     justify-content: space-between;
-    border-bottom: 1px solid #d2d6db;
+    border-bottom: 1px solid #d2d6db !important;
     padding: 0;
     margin: 0 24px;
   }
 
-  .navbar-collapse {
+  .scisp-nav .navbar-collapse {
     position: fixed;
     z-index: 999999;
     bottom: 0;
     left: 0;
     right: 0;
     overflow-y: auto;
-    max-height: calc(100% - 72px);
+    max-height: 100%;
+    top: 72px;
+    width: calc(100% - 40px);
   }
 
   .navbar-expand-xl .navbar-nav .nav-link:hover,
@@ -1346,6 +1349,7 @@ a.mega-menu-card:hover h3 {
 
   .navbar-nav {
     background-color: var(--white);
+    height: 100%;
   }
 
   .mega-menu-content.active {
@@ -1452,10 +1456,18 @@ a.mega-menu-card:hover h3 {
 .caption-overlay {
   position: absolute;
   left: auto;
-  top: calc(100% - 70%);
+  top: calc(100% - 65%);
   color: var(--text-white);
   z-index: 2;
   width: 600px;
+}
+
+.caption-overlay h1 {
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -2%;
+  margin-bottom: 48px;
 }
 
 .hero-swiper .swiper-button-next {
@@ -1594,10 +1606,12 @@ a.mega-menu-card:hover h3 {
   width: 100% !important;
   max-width: 100% !important;
 }
+
 .tweet-wrapper {
   max-width: 100%;
   width: 100%;
 }
+
 /* test */
 
 
@@ -1806,12 +1820,12 @@ footer.scisp-footer {
 
 .scisp_footer__quick-links .scisp-footer__list a:focus,
 .guest-card__links a:focus {
-  outline: 2px solid var(--color-white);
+  outline: 2px solid var(--white);
   background-color: transparent;
 }
 
 .scisp-footer__list a i {
-  color: var(--color-white);
+  color: var(--white);
 }
 
 .footer-copyright p {
@@ -1837,7 +1851,7 @@ p {
 
 .rating-section_content {
   padding: 24px 0;
-  border-top: 2px solid var(--color-primary);
+  border-top: 2px solid var(--primary);
 }
 
 .rating-body-wrapper {
@@ -1882,7 +1896,7 @@ div#feedback-no-form-rating,
 }
 
 .rating-section__submit svg path {
-  fill: var(--color-primary);
+  fill: var(--primary);
 }
 
 .rating-section__submit_description p {
@@ -1954,7 +1968,7 @@ div#feedback-no-form-rating,
 
 .rating-body-link a {
   /* text-decoration: underline; */
-  color: var(--color-primary);
+  color: var(--primary);
 }
 
 .rating-body-link a:hover {
@@ -1971,11 +1985,49 @@ div#feedback-no-form-rating,
   font-weight: 450;
   align-items: center;
   gap: 4px;
+  color: var(--white);
 }
 
-.btn.btn-close:hover {
-  background: var(--color-neutral-200);
+#yes-form-rating,
+#no-form-rating {
+  padding: 32px 0;
 }
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* .btn.btn-close:hover {
+  background: var(--color-neutral-200);
+} */
 
 .rating-section_content_description p {
   margin-bottom: 0;
@@ -2025,6 +2077,7 @@ div#feedback-no-form-rating,
     padding: 0 24px;
     max-width: 100%;
   }
+
   .scisp-navbar__wapper {
     max-width: calc(100% - 48px);
   }
@@ -2033,10 +2086,14 @@ div#feedback-no-form-rating,
 /* Mobile devices (e.g. 768px and below) */
 @media (max-width: 768px) {
 
-  .container,
-  .container-navbar {
+  .container {
     padding: 0 16px;
   }
+
+  .container-navbar {
+    padding: 0;
+  }
+
   .scisp-navbar__wapper {
     max-width: calc(100% - 32px);
   }
@@ -2053,20 +2110,43 @@ div#feedback-no-form-rating,
 
   .scisp-nav .scisp-navbar.rounded-8 {
     border-radius: 0;
-    padding: 0 16px;
+    padding: 0;
   }
 
   .scisp-nav,
   .scisp-nav.scrolled {
     top: 0 !important;
+    position: sticky;
   }
 
   .scisp-topnav.mb-24 {
     margin-bottom: 0;
   }
 
+  .hero-swiper {
+    height: 430px;
+    position: relative;
+  }
+
   .news-card-image img {
     height: 250px;
     object-fit: cover;
+  }
+
+  .caption-overlay {
+    top: 20px;
+    width: 100%;
+  }
+
+  .swiper.hero-swiper img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .caption-overlay h1 {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 32px;
   }
 }

@@ -21,7 +21,6 @@
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link:hover {
     background-color: #f3f4f6;
-    ;
     color: var(--white);
     border-radius: 8px;
     color: var(--text-default);
@@ -33,7 +32,7 @@
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link:active,
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active {
-    background: #d2d6db;
+    background: var(--border-neutral-primary);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link:active::before {
@@ -46,7 +45,7 @@
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link:active:focus {
-    background: #d2d6db;
+    background: var(--border-neutral-primary);
     outline: 0;
 }
 
@@ -83,31 +82,31 @@
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item {
-    background-color: #1B8354;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--white);
     overflow: hidden;
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item::before {
-    background-color: #54C08A;
+    background-color: var(--primary-400);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:hover {
-    background-color: #166A45;
-    color: #fff;
+    background-color: var(--colors-brand-700);
+    color: var(--white);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active.active-item,
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:active,
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:not(:disabled):active {
-    background-color: #104631;
+    background-color: var(--colors-brand-900);
     border-color: transparent;
-    color: #fff;
+    color: var(--white);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:focus {
-    background-color: #1B8354;
-    border: 2px solid #fff;
+    background-color: var(--primary);
+    border: 2px solid var(--white);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:focus::before {
@@ -146,15 +145,15 @@
 }
 
 .btn-primary:hover {
-    background-color: #166a45 !important;
-    border-color: #166a45 !important;
+    background-color: var(--colors-brand-700) !important;
+    border-color: var(--colors-brand-700) !important;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active {
     color: var(--white);
-    background-color: #104631 !important;
-    border-color: #104631 !important;
+    background-color: var(--colors-brand-900) !important;
+    border-color: var(--colors-brand-900) !important;
     outline: none;
 }
 
@@ -172,14 +171,14 @@
 .btn.btn-secondary:hover {
     color: var(--text-default) !important;
     background-color: #f3f4f6;
-    border-color: #e5e7eb;
+    border-color: var(--color-neutral-200);
 }
 
 .btn.btn-secondary:not(:disabled):not(.disabled).active,
 .btn.btn-secondary:not(:disabled):not(.disabled):active {
     color: var(--text-default) !important;
-    background-color: #e5e7eb;
-    border-color: #d2d6db;
+    background-color: var(--color-neutral-200);
+    border-color: var(--border-neutral-primary);
 }
 
 .btn.btn-secondary.focus,
@@ -313,17 +312,17 @@
 
 .custom-checkbox .checkbox-input:hover+.custom-control-indicator::before,
 .custom-control-input:hover+.custom-control-indicator::before {
-    background: #E5E7EB;
+    background: var(--color-neutral-200);
     transition: all 0.3s ease-in-out;
 }
 
 .custom-checkbox .checkbox-input:active+.custom-control-indicator::before {
-    background: #E5E7EB;
+    background: var(--color-neutral-200);
     transition: all 0.3s ease-in-out;
 }
 
 .custom-checkbox .checkbox-input:active+.custom-control-indicator {
-    background-color: #D2D6DB;
+    background-color: var(--border-neutral-primary);
 }
 
 .custom-checkbox .checkbox-input:focus+.custom-control-indicator::after {
@@ -345,8 +344,8 @@
 }
 
 .custom-checkbox .checkbox-input:checked:active+.custom-control-indicator {
-    background-color: #104631;
-    border-color: #104631;
+    background-color: var(--colors-brand-900);
+    border-color: var(--colors-brand-900);
 }
 
 /* Checked state */
@@ -390,12 +389,12 @@
 }
 
 .custom-radio .radio-input:active+.custom-control-indicator-radio::before {
-    background: #E5E7EB;
+    background: var(--color-neutral-200);
     transition: all 0.3s ease-in-out;
 }
 
 .custom-radio .radio-input:active+.custom-control-indicator-radio {
-    background-color: #D2D6DB;
+    background-color: var(--border-neutral-primary);
 }
 
 .custom-radio .radio-input:checked:hover+.custom-control-indicator-radio {
@@ -407,11 +406,11 @@
 }
 
 .custom-radio .radio-input:checked:active+.custom-control-indicator-radio {
-    border-color: #104631;
+    border-color: var(--colors-brand-900);
 }
 
 .custom-radio .radio-input:checked:active+.custom-control-indicator-radio::after {
-    background-color: #104631;
+    background-color: var(--colors-brand-900);
 }
 
 .custom-radio .radio-input:focus+.custom-control-indicator-radio .custom-control-indicator-focus {

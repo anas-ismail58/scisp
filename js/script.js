@@ -201,6 +201,64 @@
             },
         },
     });
+
+    const yesForm = document.getElementById("yes-form-rating");
+    const noForm = document.getElementById("no-form-rating");
+    const closeYesBtn = document.getElementById("close-btn-yes-form-rating");
+    const closeNoBtn = document.getElementById("close-btn-no-form-rating");
+
+    // Show Yes Form
+    document.getElementById("incrementYesRateCounter").addEventListener("click", function (event) {
+        event.preventDefault();
+        noForm.classList.add("d-none");
+        closeNoBtn.classList.add("d-none");
+
+        yesForm.classList.remove("d-none", "fade-out");
+        void yesForm.offsetWidth;
+        yesForm.classList.add("fade-in");
+
+        closeYesBtn.classList.remove("d-none");
+    });
+
+    // Show No Form
+    document.getElementById("incrementNoRateCounter").addEventListener("click", function (event) {
+        event.preventDefault();
+        yesForm.classList.add("d-none");
+        closeYesBtn.classList.add("d-none");
+
+        noForm.classList.remove("d-none", "fade-out");
+        void noForm.offsetWidth;
+        noForm.classList.add("fade-in");
+
+        closeNoBtn.classList.remove("d-none");
+    });
+
+    // Close Yes Form with animation
+    closeYesBtn.addEventListener("click", function () {
+        yesForm.classList.remove("fade-in");
+        yesForm.classList.add("fade-out");
+        closeYesBtn.classList.add("d-none");
+
+        yesForm.addEventListener("animationend", function handler() {
+            yesForm.classList.add("d-none");
+            yesForm.classList.remove("fade-out");
+            yesForm.removeEventListener("animationend", handler);
+        });
+    });
+
+    // Close No Form with animation
+    closeNoBtn.addEventListener("click", function () {
+        noForm.classList.remove("fade-in");
+        noForm.classList.add("fade-out");
+        closeNoBtn.classList.add("d-none");
+
+        noForm.addEventListener("animationend", function handler() {
+            noForm.classList.add("d-none");
+            noForm.classList.remove("fade-out");
+            noForm.removeEventListener("animationend", handler);
+        });
+    });
+
     // Wait for the tweet to be rendered (iframe added by widgets.js)
     const observer = new MutationObserver(() => {
         const tweetIframe = document.querySelector('.twitter-tweet iframe');
