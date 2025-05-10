@@ -1481,6 +1481,12 @@ a.mega-menu-card:hover h3 {
   right: 56px;
 }
 
+.hero-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: calc(100% - 70px);
+  position: absolute;
+  z-index: 1;
+}
+
 .hero-swiper .swiper-button-next,
 .hero-swiper .swiper-button-prev {
   bottom: 70px;
@@ -2077,6 +2083,7 @@ div#feedback-no-form-rating,
     padding: 0 24px;
     max-width: 100%;
   }
+
   .scisp-navbar__wapper {
     max-width: calc(100% - 48px);
   }

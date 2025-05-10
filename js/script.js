@@ -140,9 +140,43 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        pagination: {
+            el: ".hero-swiper-pagination",
+            type: "bullets",
+            clickable: true,
+        },
         scrollbar: {
             el: ".swiper-scrollbar",
-            draggable: false,
+            draggable: true,
+            hide: false,
+        },
+        breakpoints: {
+            0: {
+                scrollbar: {
+                    enabled: false, // Disable scrollbar below 992px
+                },
+                pagination: {
+                    enabled: true, // Enable pagination dots below 992px
+                },
+                navigation: {
+                    enabled: false, // Enable pagination dots below 992px
+                },
+            },
+            992: {
+                scrollbar: {
+                    enabled: true, // Enable scrollbar at 992px and above
+                },
+                pagination: {
+                    enabled: false, // Disable pagination dots at 992px and above
+                },
+            },
+        },
+        // Accessibility settings
+        a11y: {
+            enabled: true,
+            prevSlideMessage: "Previous slide",
+            nextSlideMessage: "Next slide",
+            paginationBulletMessage: "Go to slide {{index}}",
         },
     });
     const roleSwiper = new Swiper(".spcisp-role-slider", {
