@@ -2109,7 +2109,8 @@ div#feedback-no-form-rating,
   }
 
   .scisp-nav .main-header .container,
-  .scisp-nav.scrolled .main-header .container {
+  .scisp-nav.scrolled .main-header .container,
+  .container.role-container-swiper {
     padding: 0;
 
   }

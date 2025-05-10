@@ -183,6 +183,7 @@
         slidesPerView: 1,
         loop: true,
         spaceBetween: 10,
+        centeredSlides: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
