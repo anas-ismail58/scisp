@@ -1619,6 +1619,13 @@ a.mega-menu-card:hover h3 {
 }
 
 /* test */
+/* News page */
+.scisp-news-grid {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  row-gap: var(--space-32);
+  column-gap: var(--space-16);
+}
 
 
 /*  Footer  */
