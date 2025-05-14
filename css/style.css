@@ -19,6 +19,7 @@
   --text-title: #384250;
   --text-display: #1f2a37;
   --text-white: #ffffff;
+  --white:#fff;
   --text-default: #161616;
 
   --color-neutral-200: #E5E7EB;
@@ -53,49 +54,49 @@
 
 /* Font Faces */
 @font-face {
-  font-family: "IBMPlexSansArabic";
-  src: url("/fonts/IBMPlexSansArabic-Thin.ttf") format("truetype");
-  font-weight: 100;
+    font-family: "IBMPlexSansArabic";
+    src: url("../fonts/IBMPlexSansArabic-Thin.ttf") format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "IBMPlexSansArabic";
+    src: url("../fonts/IBMPlexSansArabic-Light.ttf") format("truetype");
+    font-weight: 300;
 }
 
 @font-face {
   font-family: "IBMPlexSansArabic";
-  src: url("/fonts/IBMPlexSansArabic-Light.ttf") format("truetype");
-  font-weight: 300;
-}
-
-@font-face {
-  font-family: "IBMPlexSansArabic";
-  src: url("/fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "IBMPlexSansArabic";
-  src: url("/fonts/IBMPlexSansArabic-Medium.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSansArabic-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "IBMPlexSansArabic";
-  src: url("/fonts/IBMPlexSansArabic-Bold.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSansArabic-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: "IBMPlexSansArabic";
-  src: url("/fonts/IBMPlexSansArabic-SemiBold.ttf") format("truetype");
+  src: url("../fonts/IBMPlexSansArabic-SemiBold.ttf") format("truetype");
   font-weight: 900;
 }
 
 /* icons */
 @font-face {
   font-family: "SCISP";
-  src: url("/fonts/icons/SCISP.eot");
-  src: url("/fonts/icons/SCISP.eot") format("embedded-opentype"),
-    url("/fonts/icons/SCISP.ttf") format("truetype"),
-    url("/fonts/icons/SCISP.woff") format("woff"),
-    url("/fonts/icons/SCISP.svg") format("svg");
+  src: url("../fonts/icons/SCISP.eot");
+  src: url("../fonts/icons/SCISP.eot") format("embedded-opentype"),
+    url("../fonts/icons/SCISP.ttf") format("truetype"),
+    url("../fonts/icons/SCISP.woff") format("woff"),
+    url("../fonts/icons/SCISP.svg") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -290,7 +291,7 @@
 }
 
 .gap-4 {
-  gap: var(--space-4);
+  gap: var(--space-4)!important;
 }
 
 .gap-8 {
@@ -774,7 +775,7 @@
 }
 
 .rounded-4 {
-  border-radius: var(--radius-4);
+  border-radius: var(--radius-4)!important;
 }
 
 .rounded-8 {
@@ -2355,5 +2356,6 @@ div#feedback-no-form-rating,
 
 .rtl .scisp_footer__quick-links h4 {
   padding-left: 30px;
+  padding-right: 0;
 }
 /* rtl css end */

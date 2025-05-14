@@ -269,6 +269,12 @@
     border-radius: 2px;
 }
 
+.custom-control-indicator,
+.custom-control-indicator-radio {
+    left: auto;
+    right: 0;
+}
+
 .custom-control-indicator-radio {
     border-radius: 50%;
 }
@@ -423,4 +429,47 @@
     left: -3.2px;
     top: -3.2px;
     outline: 2px solid var(--text-default);
+}
+
+.custom-control {
+    position: relative;
+}
+
+/* rtl */
+
+.rtl .custom-control.custom-checkbox,
+.rtl .custom-control.custom-radio {
+    padding-right: 36px;
+    padding-left: 0;
+}
+
+.rtl .custom-control-indicator,
+.rtl .custom-control-indicator-radio,
+.rtl .custom-control-input {
+    left: auto;
+    right: 0;
+}
+
+.rtl .custom-checkbox .custom-control-indicator::before {
+    right: -9px;
+    left: auto;
+}
+
+.rtl .icon-scisp-arrow-right:before {
+
+    content: "\e91e";
+
+}
+
+.rtl .icon-scisp-Arrow-left:before {
+    content: "\e91d";
+}
+
+.rtl .scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target]:after {
+    right: auto;
+    left: 12px;
+}
+
+.rtl .scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target] {
+    padding: 24px 16px 24px 32px;
 }
