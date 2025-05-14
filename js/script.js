@@ -294,6 +294,60 @@
         });
     });
 
+    // const listLinks = document.querySelectorAll('.mot-list__item-link');
+
+    // listLinks.forEach(link => {
+    //     link.addEventListener('click', () => {
+    //         // Remove 'active' class from all links
+    //         listLinks.forEach(l => l.classList.remove('active'));
+
+    //         // Add 'active' class to the clicked link
+    //         link.classList.add('active');
+    //     });
+    // });
+
+
+    const spcisplistLinks = document.querySelectorAll('.mot-list__item-link');
+
+  spcisplistLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      spcisplistLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  // Scroll spy to update active link
+  window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    spcisplistLinks.forEach(link => {
+      const targetId = link.getAttribute('href');
+      const target = document.querySelector(targetId);
+      if (target) {
+        const offsetTop = target.offsetTop;
+        const offsetBottom = offsetTop + target.offsetHeight;
+
+        if (scrollPosition >= offsetTop - 50 && scrollPosition < offsetBottom) {
+          spcisplistLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      }
+    });
+  });
+
+  // Parallax effect with IntersectionObserver
+  const observerLink = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.list-page-content').forEach(section => {
+    observerLink.observe(section);
+  });
     // Wait for the tweet to be rendered (iframe added by widgets.js)
     const observer = new MutationObserver(() => {
         const tweetIframe = document.querySelector('.twitter-tweet iframe');

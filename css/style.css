@@ -6,6 +6,7 @@
   --space-16: 16px;
   --space-24: 24px;
   --space-32: 32px;
+  --space-40: 48px;
   --space-48: 48px;
   --space-64: 64px;
 
@@ -584,7 +585,9 @@
 .pt-32 {
   padding-top: var(--space-32);
 }
-
+.pt-40 {
+  padding-top: var(--space-40);
+}
 .pt-48 {
   padding-top: var(--space-48);
 }
@@ -617,7 +620,9 @@
 .pb-32 {
   padding-bottom: var(--space-32);
 }
-
+.pb-40 {
+  padding-bottom: var(--space-40);
+}
 .pb-48 {
   padding-bottom: var(--space-48);
 }

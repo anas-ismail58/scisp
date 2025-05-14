@@ -473,3 +473,71 @@
 .rtl .scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target] {
     padding: 24px 16px 24px 32px;
 }
+
+.scisp-breadcrumb {
+    height: 328px;
+}
+
+ul.nested-list {
+    list-style: none;
+    padding: 0;
+    position: sticky;
+    top: 70px;
+}
+
+a.scisp-list__item-link.active {
+    color: var(--text-default);
+    font-weight: 700;
+    position: relative;
+}
+
+a.scisp-list__item-link {
+    padding: 8px 12px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-default);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+a.scisp-list__item-link.active:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    background: var(--primary);
+    width: 3px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+a.scisp-list__item-link:hover {
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.5s ease-in-out;
+}
+
+/* .list-page-content {
+    padding: 80px 0;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    height: 0;
+} */
+
+.list-page-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-bottom: 80px;
+}
+
+.list-page-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.rtl a.scisp-list__item-link.active:before {
+    left: auto;
+    right: 0;
+}
