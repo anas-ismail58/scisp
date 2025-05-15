@@ -1699,6 +1699,7 @@ li.breadcrumb-item a {
   content: "<";
 }
 
+
 /* News page */
 .scisp-news-grid,
 .scisp-video-grid {
@@ -1919,7 +1920,7 @@ li.breadcrumb-item a {
   opacity: 1;
 }
 
-/* animated button */
+/* play animated button */
 @keyframes waves {
   0% {
     -webkit-transform: scale(0.2, 0.2);
