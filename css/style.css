@@ -6,7 +6,6 @@
   --space-16: 16px;
   --space-24: 24px;
   --space-32: 32px;
-  --space-40: 48px;
   --space-48: 48px;
   --space-64: 64px;
 
@@ -619,10 +618,6 @@
   padding-top: var(--space-32);
 }
 
-.pt-40 {
-  padding-top: var(--space-40);
-}
-
 .pt-48 {
   padding-top: var(--space-48);
 }
@@ -654,10 +649,6 @@
 
 .pb-32 {
   padding-bottom: var(--space-32);
-}
-
-.pb-40 {
-  padding-bottom: var(--space-40);
 }
 
 .pb-48 {
@@ -1676,6 +1667,39 @@ a.mega-menu-card:hover h3 {
   opacity: 0.6;
 }
 
+.breadcrumb {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+li.breadcrumb-item a {
+  color: #fff;
+}
+
+.breadcrumb-item.active {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.rtl .breadcrumb-item+.breadcrumb-item::before {
+  float: right;
+  content: ">";
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  padding: 0 var(--space-4);
+  color: #fff;
+  content: "<";
+}
+
+
 /* News page */
 .scisp-news-grid,
 .scisp-video-grid {
@@ -1686,8 +1710,7 @@ a.mega-menu-card:hover h3 {
 }
 
 .news-card-grid {
-  border: 1px solid var(--border-neutral-primary);
-  transition: all ease-in-out 0.5s;
+  border: 1px solid var(--border-neutral-primary)
 }
 
 .news-card-grid:hover {
@@ -1699,10 +1722,9 @@ a.mega-menu-card:hover h3 {
   width: auto;
   height: 250px;
   object-fit: cover;
-  transition: all ease-in-out 0.5s;
 }
 
-.news-card-grid:hover .news-card-grid-image img {
+.news-card-grid-image img:hover {
   object-fit: cover;
   transform: scale(1.1);
   transition: all ease-in-out 0.5s;
@@ -1734,9 +1756,7 @@ a.mega-menu-card:hover h3 {
   height: 24px;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
 }
-
 
 .pagination-item {
   position: relative;
@@ -1747,23 +1767,19 @@ a.mega-menu-card:hover h3 {
   text-decoration: none;
 }
 
-.pagination .active span {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
+.pagination a {
+  color: var(--text-default);
+  text-decoration: none;
 }
 
-.pagination .active span:before {
+.pagination .active:before {
   content: "";
   background: var(--primary);
   position: absolute;
-  min-width: 16px;
-  max-width: calc(100% - 8px);
+  width: 100%;
   height: 3px;
   bottom: 0;
-  left: auto;
-  right: auto;
+  left: 0;
   border-radius: 9999px;
 }
 
@@ -1904,7 +1920,7 @@ a.mega-menu-card:hover h3 {
   opacity: 1;
 }
 
-/* animated button */
+/* play animated button */
 @keyframes waves {
   0% {
     -webkit-transform: scale(0.2, 0.2);
@@ -2514,6 +2530,14 @@ div#feedback-no-form-rating,
     min-height: 0;
     padding: var(--space-32) 0;
   }
+
+  .fancybox__content {
+  width: auto !important;
+  height: 320px !important;
+}
+.is-compact .fancybox__content>.f-button.is-close-btn{
+  background: transparent;
+}
 }
 
 /* rtl css */
