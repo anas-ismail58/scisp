@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCISP</title>
+    <!-- Fancy Box -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <!-- Local Bootstrap CSS -->
@@ -281,78 +284,385 @@
     <section class="scisp-breadcrumb d-flex bg-dark-primary text-white gap-48">
         <div class="container">
             <div class="d-flex gap-12 flex-column pb-48">
-                <!-- <div class="scisp-page-path d-flex gap-4">
-                    <div class="pl-4">
-                        <a>الرئيسية</a>
-                    </div>
-                    <div class="d-flex gap-4 pl-4">
-                        <i class="icon-scisp-angle-right"></i>
-                        <a>المركز الإعلامى</a>
-                    </div>
-                    <div class="opicity-60 d-flex gap-4 pl-4">
-                        <i class="icon-scisp-angle-right"></i>
-                        <a>الاخبار</a>
-                    </div> 
-                </div> -->
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">الرئيسية</a></li>
                         <li class="breadcrumb-item"><a href="#">المركز الاعلامي</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">الأخبار</li>
+                        <li class="breadcrumb-item active" aria-current="page">الفيديوهات</li>
                     </ol>
                 </nav>
                 <div class="spcisp-page-title heading-1">
-                    <h1>الأخبار</h1>
+                    <h1>الفيديوهات</h1>
                 </div>
             </div>
         </div>
     </section>
 
-    <!--News details-->
-    <article class="scisp-news-details py-48">
+    <!--News Section-->
+    <section class="scisp-video-page py-48">
         <div class="container">
-            <div class="news-details-content m-auto">
             <div class="d-flex flex-column gap-32">
-                <div class="news-details-image m-auto">
-                    <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
-                </div>
-                <div class="news-details-article heading-6">
-                    <p>
-                        وقّع المركز السعودي للشراكات الاستراتيجية الدولية مذكرة تعاون مع مشروع سلام للتواصل الحضاري، يوم
-                        الخميس 29 ربيع أول 1443ه، الموافق 4 نوفمبر 2021م، في مقر المركز؛ لأجل تحقيق الإنجازات المستهدفة
-                        من الطرفين، وتبادل الخبرات في البحوث والدراسات والتعاون المشترك في مجالات التأهيل والتدريب، بما
-                        يسهم في دعم الجهود الرامية إلى تعزيز الصورة الإيجابية للمملكة لدى شعوب العالم، من خلال تنمية
-                        التواصل الحضاري، وتعزيزه مع المجتمعات الدولية في إطار الشراكات الاستراتيجية الدولية للمملكة.
-                        وقّع المذكرة كل من معالي الدكتور فيصل بن حمد الصقير الرئيس التنفيذي للمركز السعودي للشراكات
-                        الاستراتيجية الدولية، ومعالي الأستاذ فيصل بن عبدالرحمن بن معمر المشرف العام على مشروع سلام
-                        للتواصل الحضاري، وبحضور عدد من منسوبي المركز وسلام.
-                    </p>
-                    <p>
-                        وتعليقًا على توقيع هذه المذكرة؛ أكد معالي الدكتور فيصل الصقير أن مذكرة التعاون الموقعة بين مركز
-                        الشراكات الاستراتيجية ومشروع سلام تأتي في إطار الدور المحوري الذي يقوم به المركز في المنظومة
-                        الحكومية، بتوحيد جهودها بما يخص الشراكات الاستراتيجية للمملكة، والمتابعة الحثيثة مع أصحاب
-                        المصلحة في المملكة ودول العالم، بما يحقق المواءمة في الأهداف المشتركة. موضحًا معاليه أن المركز
-                        بخبرته في التواصل الدولي يساند مشروع سلام في مد جسور التواصل الحضاري مع شعوب العالم، وكذلك
-                        استفادة المركز ومشروع سلام من الدراسات والبحوث، التي يجريها الطرفان بشكل مستمر لتحديد الفرص
-                        ومعرفة التطورات العالمية، وكذلك استفادة الطرفين من المنصات المحلية والدولية التي يعمل الطرفان
-                        على تنظيمها أو المشاركة في فعالياتها المختلفة، بما يخدم الصورة الحضارية للمملكة.
-                    </p>
-                    <p>
-                        من جانبه؛ رحّب معالي الأستاذ فيصل بن معمر المشرف العام على مشروع سلام بالتعاون مع المركز السعودي
-                        للشراكات الاستراتيجية الدولية، مشيراً إلى أن هذه الشراكة تعزز من إيصال الصورة الذهنية الإيجابية
-                        عن المملكة، وتساهم في مد جسور التواصل مع الشعوب والثقافات المتنوعة ونشر ثقافة التواصل الحضاري.
-                        يُشار إلى أن مذكرة التعاون تؤطر بشكل عام التنسيق والتعاون بين الطرفين، ومشاركة المعلومات
-                        والبيانات والتقارير اللازمة وتقديم الخدمات الاستشارية والمشورة العلمية حسب اختصاص كل طرف؛ حيث
-                        تهدف هذه المذكرة إلى التعاون في مجال الدراسات والأبحاث، والتعاون في مجال التأهيل والتدريب،
-                        ومشاركة معلومات قاعدة البيانات والتقارير الدولية، وإقامة برامج مشتركة تعزز الصورة الإيجابية عن
-                        المملكة، والتعاون في مجال المشاركة في المؤتمرات والفعاليات ذات العلاقة.
+                <div class="scisp-news-filter">
+                    <p class="heading-6">
+                        عرض 1 - 12 من 189
                     </p>
                 </div>
+                <div class="scisp-video-grid">
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
 
-            </div>
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                    <!--Card-->
+                    <div class="video-card-grid d-flex flex-column gap-24 rounded-16 px-16 py-16">
+                        <div class="video-card-grid-image">
+                            <!-- <img class="w-100 rounded-8" src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" /> -->
+                            <a href="image/hero.mp4"
+                                data-fancybox="gallery">
+                                <img class="w-100 rounded-8"
+                                    src="/image/561d81dc934fa598cc0b82820ff3bf51aa8a2408.jpg" />
+                                <div class="play-button">
+                                    <div class="video-main">
+                                        <div class="promo-video">
+                                            <div class="waves-block">
+                                                <div class="waves wave-1"></div>
+                                                <div class="waves wave-2"></div>
+                                                <div class="waves wave-3"></div>
+                                            </div>
+                                        </div>
+                                        <i class="icon-scisp-video"></i>
+                                    </div>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column gap-8">
+                            <div>
+                                <h4 class="mb-0 font-semibold heading-4">
+                                    مركز الشراكات الاستراتيجية يوقّع مذكرة تعاون مع مشروع سلام
+                                    للتواصل الحضاري
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="video-card-grid-date ">
+                            <span>
+                                04 نوفمبر 2021
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scisp-page-pagination m-auto px-16 py-16 d-flex gap-8 align-items-center">
+                    <div>
+                        <ul class="pagination p-0 gap-8">
+                            <li class="pagination-item"><a class="pagination-number" href="#"><i
+                                        class="icon-scisp-angle-right"></i></a></li>
+                            <li class="pagination-item"><a class="pagination-number active" href="#">1</a></li>
+                            <li class="pagination-item"><a class="pagination-number" href="#">2</a></li>
+                            <li class="pagination-item"><a class="pagination-number" href="#">3</a></li>
+                            <li class="pagination-item"><a class="pagination-number rotate-180" href="#"><i
+                                        class="icon-scisp-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>
+                            اجمالى عدد الصفحات 246
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-    </article>
+    </section>
     <!-- page edit date -->
     <section class="scips-page-edit-date px-16 py-16">
         <div class="container">

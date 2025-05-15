@@ -332,6 +332,11 @@
         childList: true,
         subtree: true,
     });
+// fancy video
+Fancybox.bind('[data-fancybox="gallery"]', {
+  // Your custom options for a specific gallery
+});
+
 
 
 })();
