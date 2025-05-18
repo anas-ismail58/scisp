@@ -345,6 +345,46 @@
                     targetDiv.classList.add('my-class');
                     console.log(targetDiv);
                     console.log('Class added!');
+    
+    // On link click
+    $('.scisp-list__item-link').on('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
+
+        // Remove 'active' class from all links and add to the clicked one
+        $('.scisp-list__item-link').removeClass('active');
+        $(this).addClass('active');
+
+        // Optional: Smooth scroll to target
+        var targetId = $(this).attr('href');
+        var $target = $(targetId);
+        if ($target.length) {
+            $('html, body').animate({
+                scrollTop: $target.offset().top
+            }, 500);
+        }
+    });
+
+    // On scroll
+    $(window).on('scroll', function () {
+        var scrollPosition = $(this).scrollTop();
+
+        $('.scisp-list__item-link').each(function () {
+            var $link = $(this);
+            var targetId = $link.attr('href');
+            var $target = $(targetId);
+
+            if ($target.length) {
+                var targetOffset = $target.offset().top - 190;
+                var targetHeight = $target.outerHeight();
+
+                if (scrollPosition >= targetOffset && scrollPosition < targetOffset + targetHeight) {
+                    // Update active link
+                    $('.scisp-list__item-link').removeClass('active');
+                    $link.addClass('active');
+
+                    // Update active section
+                    $('.scisp-section').removeClass('active-section');
+                    $target.addClass('active-section');
                 } else {
                     $target.removeClass('active-section');
                 }
