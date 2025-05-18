@@ -33,6 +33,7 @@
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link:active,
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active {
     background: var(--border-neutral-primary);
+    background: var(--border-neutral-primary);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link:active::before {
@@ -45,6 +46,7 @@
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link:active:focus {
+    background: var(--border-neutral-primary);
     background: var(--border-neutral-primary);
     outline: 0;
 }
@@ -84,14 +86,19 @@
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item {
     background-color: var(--primary);
     color: var(--white);
+    background-color: var(--primary);
+    color: var(--white);
     overflow: hidden;
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item::before {
     background-color: var(--primary-400);
+    background-color: var(--primary-400);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:hover {
+    background-color: var(--colors-brand-700);
+    color: var(--white);
     background-color: var(--colors-brand-700);
     color: var(--white);
 }
@@ -100,11 +107,15 @@
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:active,
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:not(:disabled):active {
     background-color: var(--colors-brand-900);
+    background-color: var(--colors-brand-900);
     border-color: transparent;
+    color: var(--white);
     color: var(--white);
 }
 
 .scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active-item:focus {
+    background-color: var(--primary);
+    border: 2px solid var(--white);
     background-color: var(--primary);
     border: 2px solid var(--white);
 }
@@ -144,7 +155,35 @@
     transition: transform 0.3s ease-in-out;
 }
 
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target] {
+    padding: 24px 32px 24px 16px;
+    position: relative;
+}
+
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target]:after {
+    position: absolute;
+    content: "\e91f";
+    font-family: "SCISP";
+    right: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target="#megaSearch"] {
+    padding: 24px 16px 24px 16px;
+}
+
+.scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target="#megaSearch"]:after {
+    display: none;
+}
+
+.scisp-nav .navbar-expand-xl .navbar-nav .nav-link.active::after {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
 .btn-primary:hover {
+    background-color: var(--colors-brand-700) !important;
+    border-color: var(--colors-brand-700) !important;
     background-color: var(--colors-brand-700) !important;
     border-color: var(--colors-brand-700) !important;
 }
@@ -152,6 +191,8 @@
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active {
     color: var(--white);
+    background-color: var(--colors-brand-900) !important;
+    border-color: var(--colors-brand-900) !important;
     background-color: var(--colors-brand-900) !important;
     border-color: var(--colors-brand-900) !important;
     outline: none;
@@ -172,11 +213,14 @@
     color: var(--text-default) !important;
     background-color: #f3f4f6;
     border-color: var(--color-neutral-200);
+    border-color: var(--color-neutral-200);
 }
 
 .btn.btn-secondary:not(:disabled):not(.disabled).active,
 .btn.btn-secondary:not(:disabled):not(.disabled):active {
     color: var(--text-default) !important;
+    background-color: var(--color-neutral-200);
+    border-color: var(--border-neutral-primary);
     background-color: var(--color-neutral-200);
     border-color: var(--border-neutral-primary);
 }
@@ -275,6 +319,12 @@
     right: 0;
 }
 
+.custom-control-indicator,
+.custom-control-indicator-radio {
+    left: auto;
+    right: 0;
+}
+
 .custom-control-indicator-radio {
     border-radius: 50%;
 }
@@ -319,15 +369,18 @@
 .custom-checkbox .checkbox-input:hover+.custom-control-indicator::before,
 .custom-control-input:hover+.custom-control-indicator::before {
     background: var(--color-neutral-200);
+    background: var(--color-neutral-200);
     transition: all 0.3s ease-in-out;
 }
 
 .custom-checkbox .checkbox-input:active+.custom-control-indicator::before {
     background: var(--color-neutral-200);
+    background: var(--color-neutral-200);
     transition: all 0.3s ease-in-out;
 }
 
 .custom-checkbox .checkbox-input:active+.custom-control-indicator {
+    background-color: var(--border-neutral-primary);
     background-color: var(--border-neutral-primary);
 }
 
@@ -350,6 +403,8 @@
 }
 
 .custom-checkbox .checkbox-input:checked:active+.custom-control-indicator {
+    background-color: var(--colors-brand-900);
+    border-color: var(--colors-brand-900);
     background-color: var(--colors-brand-900);
     border-color: var(--colors-brand-900);
 }
@@ -396,10 +451,12 @@
 
 .custom-radio .radio-input:active+.custom-control-indicator-radio::before {
     background: var(--color-neutral-200);
+    background: var(--color-neutral-200);
     transition: all 0.3s ease-in-out;
 }
 
 .custom-radio .radio-input:active+.custom-control-indicator-radio {
+    background-color: var(--border-neutral-primary);
     background-color: var(--border-neutral-primary);
 }
 
@@ -413,9 +470,11 @@
 
 .custom-radio .radio-input:checked:active+.custom-control-indicator-radio {
     border-color: var(--colors-brand-900);
+    border-color: var(--colors-brand-900);
 }
 
 .custom-radio .radio-input:checked:active+.custom-control-indicator-radio::after {
+    background-color: var(--colors-brand-900);
     background-color: var(--colors-brand-900);
 }
 
@@ -429,6 +488,49 @@
     left: -3.2px;
     top: -3.2px;
     outline: 2px solid var(--text-default);
+}
+
+.custom-control {
+    position: relative;
+}
+
+/* rtl */
+
+.rtl .custom-control.custom-checkbox,
+.rtl .custom-control.custom-radio {
+    padding-right: 36px;
+    padding-left: 0;
+}
+
+.rtl .custom-control-indicator,
+.rtl .custom-control-indicator-radio,
+.rtl .custom-control-input {
+    left: auto;
+    right: 0;
+}
+
+.rtl .custom-checkbox .custom-control-indicator::before {
+    right: -9px;
+    left: auto;
+}
+
+.rtl .icon-scisp-arrow-right:before {
+
+    content: "\e91e";
+
+}
+
+.rtl .icon-scisp-Arrow-left:before {
+    content: "\e91d";
+}
+
+.rtl .scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target]:after {
+    right: auto;
+    left: 12px;
+}
+
+.rtl .scisp-nav .navbar-expand-xl .navbar-nav a.nav-link[data-target] {
+    padding: 24px 16px 24px 32px;
 }
 
 .custom-control {

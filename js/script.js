@@ -145,8 +145,43 @@
             type: "bullets",
             clickable: true,
         },
+        pagination: {
+            el: ".hero-swiper-pagination",
+            type: "bullets",
+            clickable: true,
+        },
         scrollbar: {
             el: ".swiper-scrollbar",
+            draggable: true,
+            hide: false,
+        },
+        breakpoints: {
+            0: {
+                scrollbar: {
+                    enabled: false, // Disable scrollbar below 992px
+                },
+                pagination: {
+                    enabled: true, // Enable pagination dots below 992px
+                },
+                navigation: {
+                    enabled: false, // Enable pagination dots below 992px
+                },
+            },
+            992: {
+                scrollbar: {
+                    enabled: true, // Enable scrollbar at 992px and above
+                },
+                pagination: {
+                    enabled: false, // Disable pagination dots at 992px and above
+                },
+            },
+        },
+        // Accessibility settings
+        a11y: {
+            enabled: true,
+            prevSlideMessage: "Previous slide",
+            nextSlideMessage: "Next slide",
+            paginationBulletMessage: "Go to slide {{index}}",
             draggable: true,
             hide: false,
         },
@@ -183,6 +218,7 @@
         slidesPerView: 1,
         loop: true,
         spaceBetween: 10,
+        centeredSlides: true,
         centeredSlides: true,
         pagination: {
             el: ".swiper-pagination",
@@ -310,7 +346,7 @@
                     console.log(targetDiv);
                     console.log('Class added!');
                 } else {
-                    console.warn('Target div not found inside iframe');
+                    $target.removeClass('active-section');
                 }
             } catch (err) {
                 console.error('Error accessing iframe content:', err);
@@ -339,4 +375,6 @@ Fancybox.bind('[data-fancybox="gallery"]', {
 
 
 
-})();
+})
+})
+();

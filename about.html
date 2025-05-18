@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html class="rtl" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCISP</title>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Your Custom Utility CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/status.css" />
+
+
+</head>
+
+<style>
+    .list-page-content {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        pointer-events: none;
+    }
+
+    .list-page-content.active-section {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .list-page-content:first-child {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+</style>
+
+<body>
+    <section class="scisp-nav">
+        <section class="scisp-topnav mb-24">
+            <div class="container">
+                <div class="scisp-top-menu d-none d-md-none d-lg-block d-xl-block">
+                    <div class="scisp-top-container d-flex align-items-center justify-content-between">
+                        <div class="scisp-top-nav d-flex align-items-center gap-16">
+                            <a href="#" class="top-nav d-flex align-items-center gap-4 text-white">
+                                <i class="icon-scisp-accessibility"></i>
+                                <span>إمكانية الوصول</span>
+                            </a>
+                            <a href="#" class="top-nav d-flex align-items-center gap-4 text-white">
+                                <i class="icon-scisp-language"></i>
+                                <span>English</span>
+                            </a>
+                            <a href="#" class="top-nav d-flex align-items-center gap-4 text-white">
+                                <i class="icon-scisp-call"></i>
+                                <span>اتصل بنا</span>
+                            </a>
+                        </div>
+                        <div class="scisp-top-nav-action d-flex align-items-center gap-16">
+                            <a href="#" class="d-flex align-items-center gap-4 text-white">
+                                <i class="icon-scisp-location"></i>
+                                <span>الرياض</span>
+                            </a>
+                            <a href="#" class="d-flex align-items-center gap-4 text-white">
+                                <i class="icon-scisp-time"></i>
+                                <span>2:30 PM</span>
+                            </a>
+                            <a href="#" class="d-flex align-items-center gap-4 text-white">
+                                <i class="icon-scisp-calendar"></i>
+                                <span>3-Sep-2024</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div></div>
+        <header class="main-header">
+            <div class="container-navbar">
+                <nav class="navbar navbar-expand-xl scisp-navbar rounded-8 px-24">
+                    <div class="d-flex align-items-center justify-content-between w-100 flex-wrap scisp-navbar__wapper">
+                        <a class="navbar-brand" href="/">
+                            <img src="/image/Logo-New.svg" draggable="false" alt="scisp-logo">
+                        </a>
+                        <!-- Icons for Mobile Only -->
+                        <div class="main-header__icons d-flex align-items-center d-xl-none">
+                            <!-- END || Search -->
+                            <!-- Toggler -->
+                            <button class="navbar-toggler" type="button" data-target="#navbarNavDropdown"
+                                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="icon-scisp-menu"></i>
+                            </button>
+                            <!-- END || Toggler -->
+                        </div>
+                        <!-- END || Icons for Mobile Only -->
+                        <!-- Menu -->
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+                            <ul class="navbar-nav">
+                                <!-- The home -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        الصفحة الرئيسية
+                                    </a>
+                                </li>
+                                <!-- END || The home -->
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-target="#megaSectors">
+                                        عن المركز
+
+                                    </a>
+                                    <div class="bg-white mega-menu-content" id="megaSectors">
+                                        <div class="mega-menu-content__wrapper">
+                                            <div class="row">
+                                                <div class="col-xl-5 d-none d-xl-flex">
+                                                    <div class="mega-menu-card d-flex">
+                                                        <div class="mega-menu-card__image">
+                                                            <img src="" draggable="false" alt="The Ministry">
+                                                        </div>
+                                                        <div class="mega-menu-card__text">
+                                                            <h3>ميزانية الدولة</h3>
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet, consectetur
+                                                                adipiscing
+                                                                elit, sed do eiusmod tempor incididunt ut labore
+                                                                et
+                                                                dolore magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-xl-7">
+                                                    <div class="links">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <a href="#" class="d-block">About scispLS</a>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <a href="#" class="d-block">
+                                                                    Ministry Achievements
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <a href="#" class="d-block">Future of
+                                                                    Transport</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END || Media Center -->
+
+
+                                <!-- Media Center -->
+                                <!-- The about -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        دورنا
+                                    </a>
+                                </li>
+                                <!-- END || The about -->
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-target="#megaMediaCenter1">
+                                        مركز المعرفة
+
+                                    </a>
+                                    <div class="bg-white mega-menu-content" id="megaMediaCenter1">
+                                        <div class="mega-menu-content__wrapper">
+                                            <div class="row">
+                                                <div class="col-xl-5 d-none d-xl-flex">
+                                                    <div class="mega-menu-card d-flex">
+                                                        <div class="mega-menu-card__image">
+                                                            <img src="" draggable="false" alt="The Ministry">
+                                                        </div>
+                                                        <div class="mega-menu-card__text">
+                                                            <h3>مركز المعرفة</h3>
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet, consectetur
+                                                                adipiscing
+                                                                elit, sed do eiusmod tempor incididunt ut labore
+                                                                et
+                                                                dolore magna aliqua.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12 col-xl-7">
+                                                    <div class="links">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-4">
+                                                                <a href="#" class="d-block">About scispLS</a>
+
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <a href="#" class="d-block">
+                                                                    Ministry Achievements
+                                                                </a>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <a href="#" class="d-block">Future of
+                                                                    Transport</a>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- END || Media Center -->
+                                <!-- Enablement -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"> وظائف </a>
+                                </li>
+                                <!-- END || Enablement -->
+                                <!-- Contact -->
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"> تواصل معنا </a>
+                                </li>
+                                <!-- END || Enablement -->
+                            </ul>
+                            <ul class="navbar-nav d-none d-xl-flex">
+                                <!-- Search -->
+                                <li class="nav-item">
+                                    <a class="nav-link gap-4" href="#" data-target="#megaSearch">
+                                        <span>بحث</span>
+                                        <i class="icon-scisp-Search"></i>
+                                    </a>
+                                </li>
+                                <!-- END || Search -->
+                            </ul>
+                        </div>
+                        <!-- END || Menu -->
+                        <!-- <div class="bg-white mega-menu-content" id="megaSearch">
+                            <div class="mega-menu-content__wrapper">
+                                <div class="row mega-menu-search">
+                                    <div class="col-md-6">
+                                        <h2 class="mega-menu-title">Suggestions for you</h2>
+                                        <a href="#" class="mega-menu-card d-flex">
+                                            <div class="mega-menu-card__image">
+                                                <img src="" draggable="false" alt="The Ministry">
+                                            </div>
+                                            <div class="mega-menu-card__text">
+                                                <h3>Our projects and efforts</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="mega-menu-card d-flex">
+                                            <div class="mega-menu-card__image">
+                                                <img src="" draggable="false" alt="The Ministry">
+                                            </div>
+                                            <div class="mega-menu-card__text">
+                                                <h3>Balancing Passion and Sustainability</h3>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-0 mega-menu__search">
+                                            <svg class="icon">
+                                            </svg>
+                                            <input class="form-control" type="text" name="search" id="search"
+                                                placeholder="What are you looking for?">
+                                        </div>
+                                        <h2 class="mega-menu-title mt-3">Explore topics</h2>
+                                        <div class="mega-menu-topics d-flex flex-wrap">
+                                            <a href="#" class="mega-menu-topic">Training</a>
+                                            <a href="#" class="mega-menu-topic"> Transactions inquiry </a>
+                                            <a href="#" class="mega-menu-topic">
+                                                Guests & visitors receptions services
+                                            </a>
+                                            <a href="#" class="mega-menu-topic"> Complaints services </a>
+                                            <a href="#" class="mega-menu-topic"> Complaints services </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="overlay-megamenu" id="overlay"></div>
+    </section>
+
+    <!-- breadcrumb -->
+    <section class="scisp-breadcrumb bg-dark-primary text-white gap-48">
+        <div class="container">
+            <div>
+                <div class="scisp-page-path d-flex">
+                    <div>
+                        <a>الرئيسية</a>
+                        <i class="icon-scisp-angle-left"></i>
+                    </div>
+                </div>
+                <div class="spcisp-page-title">
+                    <h1>عن المركز</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--about Section-->
+    <section class="aboutUs-section pt-40 pb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-lg-2 col-12">
+                    <ul class="nested-list">
+                        <li class="scisp-list__item">
+                            <a href="#List-item-1" class="scisp-list__item-link">نظرة عامة عن المركز</a>
+                        </li>
+                        <li class="scisp-list__item">
+                            <a href="#List-item-2" class="scisp-list__item-link">الرؤية والرسالة والقيم</a>
+                        </li>
+                        <li class="scisp-list__item">
+                            <a href="#List-item-3" class="scisp-list__item-link">مجلس الإدارة</a>
+                        </li>
+                        <li class="scisp-list__item">
+                            <a href="#List-item-4" class="scisp-list__item-link">رسالة الرئيس التنفيذي</a>
+                        </li>
+                        <li class="scisp-list__item">
+                            <a href="#List-item-5" class="scisp-list__item-link">رؤية 2030</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-9 col-lg-10 col-12">
+
+                    <div class="list-page-content" id="List-item-1">
+                        <div class="list-page-content__wapper d-flex flex-column gap-32">
+                            <div class="list-page-content__wapper__title">
+                                <h3 class="mb-0 text-primary heading-3">نظرة عامة عن المركز</h3>
+                            </div>
+                            <div class="list-page-content__wapper__details">
+                                <p>
+                                    المركز السعودي للشراكات الاستراتيجية الدولية (SCISP) جزء من المنظومة الحكومية،
+                                    ويتمتع
+                                    بالشخصية الاعتبارية المستقلة، ويرتبط تنظيميًا بمجلس الشؤون الاقتصادية والتنمية، وقد
+                                    تأسس
+                                    وفقًا لقرار مجلس الوزراء رقم (127)، وتاريخ 3 ربيع أول 1439هـ (21 نوفمبر 2017م)؛ لهدف
+                                    تحقيق
+                                    الانسجام وتوحيد جميع جهود المملكة في شأن شراكاتها الاستراتيجية الدولية مع دول
+                                    العالم،
+                                    بما
+                                    يُسهم في بناء تلك الشراكات الاستراتيجية، وتطويرها، وتعميقها، وتنسيق برامجها،
+                                    ومتابعتها
+                                    مع
+                                    الجهات المعنية. فالشراكات الاستراتيجية واحدة من أهم ركائز بناء العلاقات وصياغة
+                                    التحالفات
+                                    وتنميتها بين الدول؛ لأنها تُحقق المنفعة المتبادلة، وتُسهم في تعزيز التعاون والاهتمام
+                                    المشترك، فضلًا عن دورها المحوري في توحيد المواقف الثنائية بين الدول بناءً على تقاطع
+                                    المصالح،
+                                    سواءً الاقتصادية، أو الثقافية، أو السياسية، ما يعزز حضورها الدولي ومكانتها العالمية.
+
+                                </p>
+                                <p>
+                                    المركز السعودي للشراكات الاستراتيجية الدولية (SCISP) جزء من المنظومة الحكومية،
+                                    ويتمتع
+                                    بالشخصية الاعتبارية المستقلة، ويرتبط تنظيميًا بمجلس الشؤون الاقتصادية والتنمية، وقد
+                                    تأسس
+                                    وفقًا لقرار مجلس الوزراء رقم (127)، وتاريخ 3 ربيع أول 1439هـ (21 نوفمبر 2017م)؛ لهدف
+                                    تحقيق
+                                    الانسجام وتوحيد جميع جهود المملكة في شأن شراكاتها الاستراتيجية الدولية مع دول
+                                    العالم،
+                                    بما
+                                    يُسهم في بناء تلك الشراكات الاستراتيجية، وتطويرها، وتعميقها، وتنسيق برامجها،
+                                    ومتابعتها
+                                    مع
+                                    الجهات المعنية. فالشراكات الاستراتيجية واحدة من أهم ركائز بناء العلاقات وصياغة
+                                    التحالفات
+                                    وتنميتها بين الدول؛ لأنها تُحقق المنفعة المتبادلة، وتُسهم في تعزيز التعاون والاهتمام
+                                    المشترك، فضلًا عن دورها المحوري في توحيد المواقف الثنائية بين الدول بناءً على تقاطع
+                                    المصالح،
+                                    سواءً الاقتصادية، أو الثقافية، أو السياسية، ما يعزز حضورها الدولي ومكانتها العالمية.
+
+                                </p>
+                                <p class="mb-0">
+                                    المركز السعودي للشراكات الاستراتيجية الدولية (SCISP) جزء من المنظومة الحكومية،
+                                    ويتمتع
+                                    بالشخصية الاعتبارية المستقلة، ويرتبط تنظيميًا بمجلس الشؤون الاقتصادية والتنمية، وقد
+                                    تأسس
+                                    وفقًا لقرار مجلس الوزراء رقم (127)، وتاريخ 3 ربيع أول 1439هـ (21 نوفمبر 2017م)؛ لهدف
+                                    تحقيق
+                                    الانسجام وتوحيد جميع جهود المملكة في شأن شراكاتها الاستراتيجية الدولية مع دول
+                                    العالم،
+                                    بما
+                                    يُسهم في بناء تلك الشراكات الاستراتيجية، وتطويرها، وتعميقها، وتنسيق برامجها،
+                                    ومتابعتها
+                                    مع
+                                    الجهات المعنية. فالشراكات الاستراتيجية واحدة من أهم ركائز بناء العلاقات وصياغة
+                                    التحالفات
+                                    وتنميتها بين الدول؛ لأنها تُحقق المنفعة المتبادلة، وتُسهم في تعزيز التعاون والاهتمام
+                                    المشترك، فضلًا عن دورها المحوري في توحيد المواقف الثنائية بين الدول بناءً على تقاطع
+                                    المصالح،
+                                    سواءً الاقتصادية، أو الثقافية، أو السياسية، ما يعزز حضورها الدولي ومكانتها العالمية.
+
+                                </p>
+                            </div>
+                            <div class="about-img">
+                                <img src="image/vision.png" class="rounded-16" alt="">
+                            </div>
+                            <div class="about-download">
+                                <div
+                                    class="about-download-card py-24 px-16 d-flex rounded-16 justify-content-between align-items-center gap-8">
+                                    <h6 class="mb-0 heading-6">للاطلاع على قرار تنظيم المركز </h6>
+                                    <div class="about-download-card-btn">
+                                        <button class="btn btn-primary">
+                                            <span>تحميل</span>
+                                            <i class="icon-scisp-download"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-page-content" id="List-item-2">
+                        <div class="list-page-content__wrapper mb-32 d-flex flex-column gap-24">
+                            <h3 class="mb-0 text-primary heading-3">الرؤية</h3>
+                            <p class="mb-0">تعزيز المكانة الرفيعة للمملكة عالميًا من خلال الشراكات الاستراتيجية الدولية.
+                            </p>
+                        </div>
+
+                        <div class="list-page-content__wrapper mb-32 d-flex flex-column gap-24">
+                            <h3 class="mb-0 text-primary heading-3">الرسالة</h3>
+                            <p class="mb-0">تطوير وتعزيز ومتابعة تنفيذ الشراكات الاستراتيجية الدولية، من خلال العمل مع
+                                الجهات ذات
+                                الصلة على مواءمة الجهود الهادفة إلى تعظيم المنفعة للمملكة.</p>
+                        </div>
+                        <div class="list-page-content__wrapper d-flex flex-column gap-24">
+                            <h3 class="mb-0 text-primary heading-3">القيم</h3>
+                            <ul class="list-style-none">
+                                <li><strong> النزاهة :</strong>
+                                    العمل وفق أفضل المعايير الأخلاقية والمهنية بروح مخلصة للمصلحة العامة.</li>
+                                <li><strong>المسؤولية : </strong>
+                                    تعزيز ثقافة الملكية والمسؤولية من خلال الدعم والتمكين لتحقيق النتائج.
+                                </li>
+                                <li><strong>المهارة : </strong>
+                                    غرس بيئة من الحِرفيَّة والدقة، والكيفية، وعمل ذلك من خلال خلق المعاير
+                                    لأعمالنا.</li>
+                                <li><strong>المرونة : </strong>
+                                    إظهار موقف إيجابي وسلوك استباقي، واستجابة مرنة تجاه بيئة عالمية دائمة
+                                    التغير.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="list-page-content" id="List-item-3">
+                        <h3 class="text-center mb-32 text-primary">مجلس الإدارة</h3>
+
+                        <div class="scisp-board__flex president">
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scisp-board__flex">
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                            <div
+                                class="bscisp-board__card text-center py-16 px-16 rounded-16 d-flex flex-column gap-24">
+                                <div class="bscisp-board__card__img">
+                                    <img src="image/Board-Directors.png" alt="">
+                                </div>
+                                <div class="bscisp-board__card__content d-flex flex-column gap-8">
+                                    <h4 class="heading-4 text-primary mb-0">صاحب السمو الأمير فيصل بن فرحان آل سعود</h4>
+                                    <p class="mb-0">وزير الخارجية</p>
+                                </div>
+                                <div class="bscisp-board__card__position">
+                                    <span class="tag">رئيس مجلس الإدارة</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="list-page-content" id="List-item-4">
+                        <div class="list-page-content__wapper d-flex flex-column gap-32">
+
+                            <div class="list-page-content__wapper__title">
+                                <h3 class="mb-0 text-primary heading-3">رسالة الرئيس التنفيذي</h3>
+                            </div>
+                            <div class="list-page-content__wapper__details">
+                                <p>تتمتع المملكة بمكانة عالمية مرموقة وريادة إقليمية مؤثرة، وثقل اقتصادي مهم على الصعيد
+                                    الدولي، فهي محرك رئيس بأسواق الطاقة العالمية، وعضو في مجموعة العشرين؛ لذا تلعب دورًا
+                                    محوريًا وفاعلًا على مستوى المنطقة والعالم، إلى جانب امتلاكها حزمة من التحالفات
+                                    الراسخة،
+                                    وشبكة من العلاقات الدولية القوية. هذه التحالفات والعلاقات تشكّلت عبر المسيرة
+                                    التاريخية
+                                    للمملكة منذ توحيدها على يد المؤسس الملك عبد العزيز آل سعود (طيب الله ثراه).
+                                </p>
+                                <p>ولأن الشراكات الاستراتيجية واحدة من أهم ركائز بناء العلاقات وصياغة التحالفات وتنميتها
+                                    بين
+                                    الدول؛ لأنها تُحقق المنفعة المتبادلة، وتُسهم في تعميق التعاون والاهتمام المشترك،
+                                    فضلًا
+                                    عن دورها المحوري في توحيد المواقف الثنائية بين الدول بناءً على اتفاق المصالح، سواءً
+                                    الاقتصادية، أو الثقافية، أو السياسية، ما يعزز حضورها الدولي ومكانتها العالمية.
+                                </p>
+                                <p class="mb-0">
+                                    فقد تجذرت الشراكات كنهج رشيد ومبدأ رئيس للمملكة العربية السعودية خلال مسيرتها
+                                    الحضارية
+                                    وتجربتها التاريخية منذ عهد المؤسس الملك عبد العزيز آل سعود (طيب الله ثراه)، الذي
+                                    استثمر
+                                    مبدأ الشراكة داخليًا وخارجيًا، من خلال توحيد المملكة، وتقديمها إلى المشهد العالمي
+                                    كحليف
+                                    استراتيجي موثوق لأهم دول العالم والمنطقة، ومرورًا بأبنائه الملوك (عليهم رحمة الله)،
+                                    وصولًا إلى العهد الحالي لخادم الحرمين الشريفين الملك سلمان عبد العزيز آل سعود (يحفظه
+                                    الله)، الذين ساروا على خطى هذا النهج الرشيد.
+                                </p>
+                                <p class="mb-0">
+
+                                    واليوم بحكم التطورات المستمرة والمتغيرات المتسارعة على المستوى الإقليمي والصعيد
+                                    الدولي،
+                                    وفي ظل رؤيتنا الطموحة 2030، كان لابد من تعزيز ذلك النهج، وتكريسه كمبدأ رئيس في
+                                    منظومة
+                                    العلاقات والمصالح الدولية للمملكة؛ فقد رأت قيادة المملكة الرشيدة تأسيس المركز
+                                    السعودي
+                                    للشراكات الاستراتيجية الدولية، الذي تمّ العام 2017م (1439هـ)؛ ليكون تتويجًا لذلك
+                                    النهج،
+                                    وتأكيدًا لتلك النظرة الثاقبة كون الشراكات الاستراتيجية الدولية تسهم في تحقيق أهداف
+                                    رؤية
+                                    2030.
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-page-content" id="List-item-5">
+                        <div class="list-page-content__wapper d-flex flex-column gap-32">
+                            <div class="list-page-content__wapper__title">
+                                <h3 class="mb-0 text-primary heading-3">رؤية 2030</h3>
+                            </div>
+                            <div class="list-page-content__wapper__details">
+                                <p class="mb-0">في إطار الرؤية الطموحة للمملكة 2030؛ فإن المركز السعودي للشراكات الاستراتيجية الدولية
+                                    يعمل على مساندة جميع ما شأنه تحقيق أهداف هذه الرؤية، وذلك بالتعاون مع الجهات
+                                    بالقطاعين
+                                    العام والخاص في مجال الشراكات الاستراتيجية الدولية.
+
+                                </p>
+                            </div>
+                            <div class="vision-logo">
+                                <img src="image/Group.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="rating-section_content bg-display text-white">
+            <div class="container">
+                <div class="rating-section__wrapper">
+                    <div class="rating-section_action">
+                        <div id="rating-section-was-this-page-useful">هل كانت هذه الصفحة مفيدة؟</div>
+                        <div class="rating-section_action-btn">
+                            <div class="rating-section_action_true">
+                                <a id="incrementYesRateCounter" class="btn btn-primary">نعم</a>
+                            </div>
+                            <div class="rating-section_action_false">
+                                <a id="incrementNoRateCounter" class="btn openModal btn-primary">لا</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rating-section_content_description">
+                        <p id="result"></p>
+                        <div class="rating-section_content_desc-action">
+                            <button class="btn btn-close d-none" id="close-btn-no-form-rating">
+                                <span>إغلاق</span>
+                                <i class="scispE-false"></i>
+                            </button>
+                        </div>
+                        <div class="rating-section_content_desc-action">
+                            <button class="btn btn-close d-none" id="close-btn-yes-form-rating">
+                                <span>إغلاق</span>
+                                <i class="scispE-false"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal-rating" class="">
+            <div class="d-none" id="no-form-rating">
+                <div class="container">
+                    <div class="rating-wapper">
+                        <form id="valform-no-rating">
+                            <div class="rating-body row">
+                                <div class="col-md-6 col-12 col-lg-6">
+                                    <div class="rating-title">
+                                        <h2>يرجى إخبارنا بالسبب</h2>
+                                        <p>(يسمح باختيارات متعددة)</p>
+                                    </div>
+                                    <div class="input-wrapper custom-control custom-checkbox">
+                                        <input type="checkbox" class="checkbox-input custom-control-input"
+                                            name="multi-select-no-form" value="Content is not relevant">
+                                        <span class="custom-control-indicator"></span>
+                                        <label>المحتوى غير ذي صلة</label>
+                                    </div>
+                                    <div class="input-wrapper custom-control custom-checkbox">
+                                        <input type="checkbox" class="checkbox-input custom-control-input"
+                                            name="multi-select-no-form" value="Content is not accurate">
+                                        <span class="custom-control-indicator"></span>
+                                        <label>المحتوى غير دقيق</label>
+                                    </div>
+                                    <div class="input-wrapper custom-control custom-checkbox">
+                                        <input type="checkbox" class="checkbox-input custom-control-input"
+                                            name="multi-select-no-form" value="Content is too long">
+                                        <span class="custom-control-indicator"></span>
+                                        <label>المحتوى طويل جدًا</label>
+                                    </div>
+                                    <div class="input-wrapper custom-control custom-checkbox">
+                                        <input type="checkbox" class="checkbox-input custom-control-input"
+                                            name="multi-select-no-form" value="Something else">
+                                        <span class="custom-control-indicator"></span>
+                                        <label>شيء آخر</label>
+                                    </div>
+                                    <div class="gender-wrapper">
+                                        <div>
+                                            <div>الجنس</div>
+                                        </div>
+                                        <div class="input-wrapper custom-control custom-radio">
+                                            <input type="radio" class="radio-input custom-control-input"
+                                                name="gender-no-form" value="Male">
+                                            <span class="custom-control-indicator-radio">
+                                                <span class="custom-control-indicator-focus"></span>
+                                            </span>
+                                            <label>ذكر</label>
+                                        </div>
+                                        <div class="input-wrapper custom-control custom-radio">
+                                            <input type="radio" class="radio-input custom-control-input"
+                                                name="gender-no-form" value="Female">
+                                            <span class="custom-control-indicator-radio">
+                                                <span class="custom-control-indicator-focus"></span>
+                                            </span>
+                                            <label>أنثى</label>
+                                        </div>
+                                        <div class="input-wrapper custom-control custom-radio">
+                                            <input type="radio" class="radio-input custom-control-input"
+                                                name="gender-no-form" value="I prefer not to say">
+                                            <span class="custom-control-indicator-radio">
+                                                <span class="custom-control-indicator-focus"></span>
+                                            </span>
+                                            <label>أفضل عدم الإفصاح</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 col-lg-6">
+                                    <div id="feedback-no-form-rating">
+                                        <div class="feedback-textarea form-group__container">
+                                            <label>ملاحظات</label>
+                                            <textarea rows="3" class="form-control" name="feedback"
+                                                id="feedback-textarea-no-form-rating"
+                                                placeholder="اكتب ملاحظاتك هنا"></textarea>
+                                            <span class="focus-border"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="rating-body-footer">
+                        <div class="rating-body-link">
+                            <span>لمزيد من المعلومات انظر</span>
+                            <span><a href="#">بيان المشاركة الإلكترونية</a></span>
+                            <span>و</span>
+                            <span><a href="#">قواعد المشاركة</a></span>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" id="save-changes-no-form-rating">إرسال</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-none" id="yes-form-rating">
+            <div class="container">
+                <div class="rating-wapper">
+                    <form id="valform-yes-rating">
+                        <div class="rating-body row">
+                            <div class="col-md-6 col-12 col-lg-6">
+                                <div class="rating-title">
+                                    <h2>يرجى إخبارنا بالسبب</h2>
+                                    <p>(يسمح باختيارات متعددة)</p>
+                                </div>
+                                <div class="input-wrapper custom-control custom-checkbox">
+                                    <input type="checkbox" class="checkbox-input custom-control-input"
+                                        name="multi-select-yes-form" value="Content is relevant">
+                                    <span class="custom-control-indicator"></span>
+                                    <label>المحتوى ذو صلة</label>
+                                </div>
+                                <div class="input-wrapper custom-control custom-checkbox">
+                                    <input type="checkbox" class="checkbox-input custom-control-input"
+                                        name="multi-select-yes-form" value="It was well written">
+                                    <span class="custom-control-indicator"></span>
+                                    <label>تمت كتابته بشكل جيد</label>
+                                </div>
+                                <div class="input-wrapper custom-control custom-checkbox">
+                                    <input type="checkbox" class="checkbox-input custom-control-input"
+                                        name="multi-select-yes-form" value="The layout made it easy to read">
+                                    <span class="custom-control-indicator"></span>
+                                    <label>التنسيق جعله سهل القراءة</label>
+                                </div>
+                                <div class="input-wrapper custom-control custom-checkbox">
+                                    <input type="checkbox" class="checkbox-input custom-control-input"
+                                        name="multi-select-yes-form" value="Something else">
+                                    <span class="custom-control-indicator"></span>
+                                    <label>شيء آخر</label>
+                                </div>
+                                <div class="gender-wrapper">
+                                    <div>
+                                        <div>الجنس</div>
+                                    </div>
+                                    <div class="input-wrapper custom-control custom-radio">
+                                        <input type="radio" class="radio-input custom-control-input"
+                                            name="gender-yes-form" value="Male">
+                                        <span class="custom-control-indicator-radio">
+                                            <span class="custom-control-indicator-focus"></span>
+                                        </span>
+                                        <label>ذكر</label>
+                                    </div>
+                                    <div class="input-wrapper custom-control custom-radio">
+                                        <input type="radio" class="radio-input custom-control-input"
+                                            name="gender-yes-form" value="Female">
+                                        <span class="custom-control-indicator-radio">
+                                            <span class="custom-control-indicator-focus"></span>
+                                        </span>
+                                        <label>أنثى</label>
+                                    </div>
+                                    <div class="input-wrapper custom-control custom-radio">
+                                        <input type="radio" class="radio-input custom-control-input"
+                                            name="gender-yes-form" value="I prefer not to say">
+                                        <span class="custom-control-indicator-radio">
+                                            <span class="custom-control-indicator-focus"></span>
+                                        </span>
+                                        <label>أفضل عدم الإفصاح</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="feedback-yes-form-rating" class="col-md-6 col-12 col-lg-6">
+                                <div class="feedback-textarea form-group__container">
+                                    <label>ملاحظات</label>
+                                    <textarea rows="3" class="form-control" name="feedback"
+                                        id="feedback-textarea-yes-form-rating"
+                                        placeholder="اكتب ملاحظاتك هنا"></textarea>
+                                    <span class="focus-border"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="rating-body-footer">
+                    <div class="rating-body-link">
+                        <span>لمزيد من المعلومات انظر</span>
+                        <span><a href="#">بيان المشاركة الإلكترونية</a></span>
+                        <span>و</span>
+                        <span><a href="#">قواعد المشاركة</a></span>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" id="save-changes-yes-form-rating">إرسال</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="snackbar" class="show">
+        </div>
+    </section>
+
+
+
+    <footer class="scisp-footer text-white pt-40 pb-40">
+        <div class="container">
+            <div class="row pt-16 pb-40">
+
+                <!-- Summary Section -->
+                <div class="col-lg-3 col-sm-12 col-md-3">
+                    <div class="scisp-footer-section scisp_footer__quick-links">
+                        <h4 class="mb-0 ">ملخص</h4>
+                        <ul class="nav nav-pills navbar-site">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">حول المركز</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">الخصوصية وشروط الاستخدام</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">الأخبار</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">وظائف</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Prominent Links Section -->
+                <div class="col-lg-3 col-sm-12 col-md-3">
+                    <div class="scisp-footer-section scisp_footer__quick-links">
+                        <h4 class="mb-0">روابط مهمة</h4>
+                        <ul class="nav nav-pills navbar-site">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">دورنا</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">المناسبات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">الفعاليات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">طلب مشاركة البيانات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">المنصة الوطنية الموحدة</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact and Support -->
+                <div class="col-lg-3 col-sm-12 col-md-3">
+                    <div class="scisp-footer-section scisp_footer__quick-links">
+                        <h4 class="mb-0">الاتصال والدعم</h4>
+                        <ul class="nav nav-pills navbar-site">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تواصل معنا</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">الأسئلة الشائعة</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Social and Accessibility Tools -->
+                <div class="col-lg-3 col-sm-12 col-md-3">
+                    <div class="d-flex flex-column gap-32">
+                        <div class="scisp-footer-section scisp-footer-links-svg scisp_footer__quick-links mb-0">
+                            <h4 class="mb-0">تابعنا على</h4>
+                            <div class="scisp-footer__list">
+                                <a class="scisp-footer__list__link" href="#"><i class="icon-scisp-twitterx"></i></a>
+                                <a class="scisp-footer__list__link" href="#"><i class="icon-scisp-linkedin"></i></a>
+                                <a class="scisp-footer__list__link" href="#"><i class="icon-scisp-instagram"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="scisp-footer-section scisp_footer__quick-links mb-0">
+                            <h4 class="mb-0">أدوات الإتاحة والوصول</h4>
+                            <div class="scisp-footer__list rounded-4">
+                                <a class="scisp-footer__list__link rounded-4" href="#"><i
+                                        class="icon-scisp-hand"></i></a>
+                                <a class="scisp-footer__list__link rounded-4" href="#"><i
+                                        class="icon-scisp-zoom"></i></a>
+                                <a class="scisp-footer__list__link rounded-4" href="#"><i
+                                        class="icon-scisp-eye"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Footer bottom -->
+            <div class="row mt-48 py-16 justify-content-lg-between">
+
+                <div class="col-lg-6 d-flex flex-column gap-8">
+                    <div class="scisp_footer__quick-links mb-0">
+                        <ul class="nav nav-pills d-flex">
+                            <li class=" nav-item pr-8">
+                                <a class="nav-link" href="#">خريطة الموقع</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">سياسة الاستخدام</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="mb-0 font-semibold">جميع الحقوق محفوظة لمركز السعودي للشراكات الاستراتيجية الدولية</p>
+                    <p class="mb-0 font-regular">تاريخ آخر تحديث للمحتويات: 2024-11-12</p>
+                </div>
+                <div class="col-lg-6 d-flex gap-16">
+                    <div>
+
+
+                    </div>
+                    <div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Local Bootstrap jquery -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Local Bootstrap JS (includes Popper) -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <!-- Your Custom Utility JS -->
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
