@@ -1709,11 +1709,13 @@ li.breadcrumb-item a {
   column-gap: var(--space-16);
 }
 
-.news-card-grid {
+.news-card-grid,
+.role-card-grid {
   border: 1px solid var(--border-neutral-primary)
 }
 
-.news-card-grid:hover {
+.news-card-grid:hover,
+.role-card-grid:hover {
   box-shadow: 0px 12px 16px -6px rgba(16, 24, 40, 0.08);
   transition: ease-in-out 0.5s;
 }
@@ -1976,6 +1978,24 @@ li.breadcrumb-item a {
   animation-delay: 2s;
 }
 
+/* role page */
+.scisp-role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: var(--space-24);
+}
+.role-card-grid-icon i {
+  font-size: 22px;
+  width: 48px;
+  height: 48px;
+  background: rgba(243, 252, 246, 1);
+}
+.role-card-grid{
+  min-height: 280px;
+}
+.role-card-grid p {
+  color: rgba(31, 42, 55, 1);
+}
 /*  Footer  */
 footer.scisp-footer {
   padding: 40px 0 24px 0;
@@ -2525,6 +2545,10 @@ div#feedback-no-form-rating,
     grid-template-columns: repeat(1, auto);
     row-gap: var(--space-16);
   }
+  .scisp-role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
 
   .scisp-breadcrumb {
     min-height: 0;
@@ -2532,14 +2556,22 @@ div#feedback-no-form-rating,
   }
 
   .fancybox__content {
-  width: auto !important;
-  height: 320px !important;
-}
-.is-compact .fancybox__content>.f-button.is-close-btn{
-  background: transparent;
-}
-}
+    width: auto !important;
+    height: 320px !important;
+  }
 
+  .is-compact .fancybox__content>.f-button.is-close-btn {
+    background: transparent;
+  }
+}
+/* Small devices - Mobile devices (e.g. 576px and below) */
+@media (max-width: 576px) {
+.scisp-role-grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+  
+}
 /* rtl css */
 .rtl {
   direction: rtl;
