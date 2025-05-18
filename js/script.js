@@ -293,7 +293,7 @@
             noForm.removeEventListener("animationend", handler);
         });
     });
-
+    
     // On link click
     $('.scisp-list__item-link').on('click', function (e) {
         e.preventDefault(); // Prevent default anchor behavior
