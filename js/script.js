@@ -145,43 +145,8 @@
             type: "bullets",
             clickable: true,
         },
-        pagination: {
-            el: ".hero-swiper-pagination",
-            type: "bullets",
-            clickable: true,
-        },
         scrollbar: {
             el: ".swiper-scrollbar",
-            draggable: true,
-            hide: false,
-        },
-        breakpoints: {
-            0: {
-                scrollbar: {
-                    enabled: false, // Disable scrollbar below 992px
-                },
-                pagination: {
-                    enabled: true, // Enable pagination dots below 992px
-                },
-                navigation: {
-                    enabled: false, // Enable pagination dots below 992px
-                },
-            },
-            992: {
-                scrollbar: {
-                    enabled: true, // Enable scrollbar at 992px and above
-                },
-                pagination: {
-                    enabled: false, // Disable pagination dots at 992px and above
-                },
-            },
-        },
-        // Accessibility settings
-        a11y: {
-            enabled: true,
-            prevSlideMessage: "Previous slide",
-            nextSlideMessage: "Next slide",
-            paginationBulletMessage: "Go to slide {{index}}",
             draggable: true,
             hide: false,
         },
@@ -218,7 +183,6 @@
         slidesPerView: 1,
         loop: true,
         spaceBetween: 10,
-        centeredSlides: true,
         centeredSlides: true,
         pagination: {
             el: ".swiper-pagination",
@@ -329,22 +293,6 @@
             noForm.removeEventListener("animationend", handler);
         });
     });
-
-    // Wait for the tweet to be rendered (iframe added by widgets.js)
-    const observer = new MutationObserver(() => {
-        const tweetIframe = document.querySelector('.twitter-tweet iframe');
-
-        if (tweetIframe) {
-            // Add custom class to the iframe for styling
-            //tweetIframe.classList.add('custom-tweet');
-            try {
-                const iframeDoc = tweetIframe.contentWindow.document;
-                const targetDiv = iframeDoc.getElementById('#app'); // or any selector
-
-                if (targetDiv) {
-                    targetDiv.classList.add('my-class');
-                    console.log(targetDiv);
-                    console.log('Class added!');
     
     // On link click
     $('.scisp-list__item-link').on('click', function (e) {
@@ -388,32 +336,18 @@
                 } else {
                     $target.removeClass('active-section');
                 }
-            } catch (err) {
-                console.error('Error accessing iframe content:', err);
             }
-            // Add a class to <body> so you can style globally if needed
-            // document.body.classList.add('tweet-loaded');
-
-            console.log('Tweet rendered and styled.');
-
-            // Stop observing once the tweet is found
-            observer.disconnect();
-
-
-        }
+        });
     });
 
-    // Start observing the body for changes (new elements)
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true,
+
+
+
+    // fancy video
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // Your custom options for a specific gallery
     });
-// fancy video
-Fancybox.bind('[data-fancybox="gallery"]', {
-  // Your custom options for a specific gallery
-});
 
 
 
-})
-();
+})();
