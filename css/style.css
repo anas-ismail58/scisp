@@ -6,6 +6,7 @@
   --space-16: 16px;
   --space-24: 24px;
   --space-32: 32px;
+  --space-40: 40px;
   --space-48: 48px;
   --space-64: 64px;
 
@@ -618,6 +619,10 @@
   padding-top: var(--space-32);
 }
 
+.pt-40 {
+  padding-top: var(--space-40);
+}
+
 .pt-48 {
   padding-top: var(--space-48);
 }
@@ -649,6 +654,10 @@
 
 .pb-32 {
   padding-bottom: var(--space-32);
+}
+
+.pb-40 {
+  padding-bottom: var(--space-40);
 }
 
 .pb-48 {
@@ -1029,11 +1038,8 @@ body.no-scroll {
 .container-navbar {
   width: 100%;
   max-width: 1440px;
-  /* Hard upper limit */
   margin: 0 auto;
-  /* Center horizontally */
   padding: 0 80px;
-  /* Inner spacing */
   box-sizing: border-box;
 }
 
@@ -1041,7 +1047,9 @@ body.no-scroll {
   margin: 0 auto;
 }
 
-
+.container-navbar {
+  transition: all .8s ease-in-out;
+}
 
 /* Header  */
 .scisp-nav {
@@ -1350,7 +1358,7 @@ a.mega-menu-card:hover h3 {
 @media screen and (max-width: 1199.98px) {
   .navbar-expand-xl .navbar-nav .nav-link {
     justify-content: space-between;
-    border-bottom: 1px solid #d2d6db !important;
+    border-bottom: 1px solid var(--border-neutral-primary) !important;
     padding: 0;
     margin: 0 24px;
   }
@@ -1617,7 +1625,8 @@ a.mega-menu-card:hover h3 {
 
 
 /* news */
-.news-card {
+.news-card,
+.about-download-card {
   border: 1px solid var(--border-neutral-primary)
 }
 
@@ -1709,6 +1718,46 @@ li.breadcrumb-item a {
   column-gap: var(--space-16);
 }
 
+.scisp-board__flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -16px;
+  /* counter overall left margin */
+  row-gap: 32px;
+  align-items: center;
+}
+
+.scisp-board__flex>.bscisp-board__card {
+  width: calc(25% - 16px);
+  margin-left: 16px;
+  border: 1px solid var(--border-neutral-primary)
+}
+
+/* Remove left margin from the last item in each row */
+.scisp-board__flex>.bscisp-board__card:nth-child(4n) {
+  margin-left: 0;
+}
+
+.scisp-board__flex.president {
+  margin-bottom: 32px;
+}
+
+span.tag {
+  height: 24px;
+  border: 1px solid #E5E7EB;
+  background: #F9FAFB;
+  font-size: 12px;
+  color: #1F2A37;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+.vision-logo img {
+  height: 267px;
+  height: auto;
+}
+
 .news-card-grid {
   border: 1px solid var(--border-neutral-primary)
 }
@@ -1718,7 +1767,8 @@ li.breadcrumb-item a {
   transition: ease-in-out 0.5s;
 }
 
-.news-card-grid-image img {
+.news-card-grid-image img,
+.bscisp-board__card__img img {
   width: auto;
   height: 250px;
   object-fit: cover;
@@ -2362,6 +2412,83 @@ div#feedback-no-form-rating,
   animation: fadeOut 0.5s ease-out forwards;
 }
 
+/* list content */
+
+ul.nested-list {
+  list-style: none;
+  padding: 0;
+  position: sticky;
+  top: 70px;
+}
+
+a.scisp-list__item-link {
+  padding: 8px 12px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #384250;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+a.scisp-list__item-link:hover {
+  text-decoration: none;
+  color: var(--primary);
+  transition: all 0.5s ease-in-out;
+}
+
+a.scisp-list__item-link.active {
+  color: #384250;
+  font-weight: 700;
+  position: relative;
+}
+
+a.scisp-list__item-link.active:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  background: var(--primary);
+  width: 3px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.rtl a.scisp-list__item-link.active:before {
+  left: auto;
+  right: 0;
+}
+
+.list-page-content {
+  padding-top: 20px;
+}
+
+.list-page-content:first-child {
+  padding: 0;
+}
+
+.list-page-content__wrapper h3,
+.list-page-content__wrapper p {
+  margin-bottom: 0;
+}
+
+.about-img img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border: var(--border-1) solid var(--border-neutral-primary);
+  opacity: .9;
+}
+
+.list-page-content__wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.list-page-content__wrapper ul li {
+  margin-bottom: var(--space-12);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -2532,12 +2659,13 @@ div#feedback-no-form-rating,
   }
 
   .fancybox__content {
-  width: auto !important;
-  height: 320px !important;
-}
-.is-compact .fancybox__content>.f-button.is-close-btn{
-  background: transparent;
-}
+    width: auto !important;
+    height: 320px !important;
+  }
+
+  .is-compact .fancybox__content>.f-button.is-close-btn {
+    background: transparent;
+  }
 }
 
 /* rtl css */

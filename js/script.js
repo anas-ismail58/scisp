@@ -294,48 +294,59 @@
         });
     });
 
-    // Wait for the tweet to be rendered (iframe added by widgets.js)
-    const observer = new MutationObserver(() => {
-        const tweetIframe = document.querySelector('.twitter-tweet iframe');
+    // On link click
+    $('.scisp-list__item-link').on('click', function (e) {
+        e.preventDefault(); // Prevent default anchor behavior
 
-        if (tweetIframe) {
-            // Add custom class to the iframe for styling
-            //tweetIframe.classList.add('custom-tweet');
-            try {
-                const iframeDoc = tweetIframe.contentWindow.document;
-                const targetDiv = iframeDoc.getElementById('#app'); // or any selector
+        // Remove 'active' class from all links and add to the clicked one
+        $('.scisp-list__item-link').removeClass('active');
+        $(this).addClass('active');
 
-                if (targetDiv) {
-                    targetDiv.classList.add('my-class');
-                    console.log(targetDiv);
-                    console.log('Class added!');
-                } else {
-                    console.warn('Target div not found inside iframe');
-                }
-            } catch (err) {
-                console.error('Error accessing iframe content:', err);
-            }
-            // Add a class to <body> so you can style globally if needed
-            // document.body.classList.add('tweet-loaded');
-
-            console.log('Tweet rendered and styled.');
-
-            // Stop observing once the tweet is found
-            observer.disconnect();
-
-
+        // Optional: Smooth scroll to target
+        var targetId = $(this).attr('href');
+        var $target = $(targetId);
+        if ($target.length) {
+            $('html, body').animate({
+                scrollTop: $target.offset().top
+            }, 500);
         }
     });
 
-    // Start observing the body for changes (new elements)
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true,
+    // On scroll
+    $(window).on('scroll', function () {
+        var scrollPosition = $(this).scrollTop();
+
+        $('.scisp-list__item-link').each(function () {
+            var $link = $(this);
+            var targetId = $link.attr('href');
+            var $target = $(targetId);
+
+            if ($target.length) {
+                var targetOffset = $target.offset().top - 190;
+                var targetHeight = $target.outerHeight();
+
+                if (scrollPosition >= targetOffset && scrollPosition < targetOffset + targetHeight) {
+                    // Update active link
+                    $('.scisp-list__item-link').removeClass('active');
+                    $link.addClass('active');
+
+                    // Update active section
+                    $('.scisp-section').removeClass('active-section');
+                    $target.addClass('active-section');
+                } else {
+                    $target.removeClass('active-section');
+                }
+            }
+        });
     });
-// fancy video
-Fancybox.bind('[data-fancybox="gallery"]', {
-  // Your custom options for a specific gallery
-});
+
+
+
+
+    // fancy video
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // Your custom options for a specific gallery
+    });
 
 
 
